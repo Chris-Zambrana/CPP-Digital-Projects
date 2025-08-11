@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="spi_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="spi_testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,938.001 ns"></ZoomEndTime>
+      <Cursor1Time time="45.500 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/spi_testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/cpol" type="logic">
+      <obj_property name="ElementShortName">cpol</obj_property>
+      <obj_property name="ObjectShortName">cpol</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/cpha" type="logic">
+      <obj_property name="ElementShortName">cpha</obj_property>
+      <obj_property name="ObjectShortName">cpha</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/lsb_first" type="logic">
+      <obj_property name="ElementShortName">lsb_first</obj_property>
+      <obj_property name="ObjectShortName">lsb_first</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider133">
+      <obj_property name="label">Master</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/miso" type="logic">
+      <obj_property name="ElementShortName">miso</obj_property>
+      <obj_property name="ObjectShortName">miso</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/rx_data" type="array">
+      <obj_property name="ElementShortName">rx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/tx_data" type="array">
+      <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider187">
+      <obj_property name="label">Timing</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FFFF00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/sclk" type="logic">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/dut/u_spi/toggle" type="logic">
+      <obj_property name="ElementShortName">toggle</obj_property>
+      <obj_property name="ObjectShortName">toggle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/dut/u_spi/state_reg" type="array">
+      <obj_property name="ElementShortName">state_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group189" type="group">
+      <obj_property name="label">Start/End </obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/spi_testbench/ready" type="logic">
+         <obj_property name="ElementShortName">ready</obj_property>
+         <obj_property name="ObjectShortName">ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/spi_testbench/dut/u_spi/start_pulse" type="logic">
+         <obj_property name="ElementShortName">start_pulse</obj_property>
+         <obj_property name="ObjectShortName">start_pulse</obj_property>
+      </wvobject>
+      <wvobject fp_name="/spi_testbench/dut/u_spi/cs" type="logic">
+         <obj_property name="ElementShortName">cs</obj_property>
+         <obj_property name="ObjectShortName">cs</obj_property>
+      </wvobject>
+      <wvobject fp_name="/spi_testbench/spi_done_tick" type="logic">
+         <obj_property name="ElementShortName">spi_done_tick</obj_property>
+         <obj_property name="ObjectShortName">spi_done_tick</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider139">
+      <obj_property name="label">Slave</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#00FFFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/mosi" type="logic">
+      <obj_property name="ElementShortName">mosi</obj_property>
+      <obj_property name="ObjectShortName">mosi</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/cs_num" type="array">
+      <obj_property name="ElementShortName">cs_num[1:0]</obj_property>
+      <obj_property name="ObjectShortName">cs_num[1:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/spi_testbench/slave_data_reg" type="array">
+      <obj_property name="ElementShortName">slave_data_reg[3:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">slave_data_reg[3:0][7:0]</obj_property>
+   </wvobject>
+</wave_config>
