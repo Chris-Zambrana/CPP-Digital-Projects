@@ -40,6 +40,7 @@ module project_1(
    .s(s)
    );
    
+   assign c_out = c1 | c2;
 
 endmodule
 
