@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/10/2025 07:05:24 AM
+// Create Date: 09/15/2025 12:02:53 AM
 // Design Name: 
-// Module Name: project_1
+// Module Name: Definitions
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,28 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module project_1(
-    input a , b, c_in,
-    output s , c_out,
-    Addsub
-    );
-    wire cl,s1,s2;
-   Half_adder HA0 (
-   .a(a),
-   .b(b),
-   .c(c1),
-   .s(s1)
-   );
-   
-   Half_adder HA1 (
-   
-   .a(c_in),
-   .b(s1),
-   .c(c2),
-   .s(s)
-   );
-   
-assign c_out = c1 | c2;
-endmodule
 
-   
+module Definitions(
+`ifndef Multiplexer_Definitions
+`define Multiplexer_Definitions
+`define Bit_width 16
+`endif
+    );
+endmodule
