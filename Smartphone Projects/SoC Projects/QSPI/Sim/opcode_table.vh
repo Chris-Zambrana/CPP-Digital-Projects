@@ -1,4 +1,4 @@
-// qspi_opcode_table.vh
+// opcode_table.vh
 // -----------------------------------------------------------------------------
 // QSPI opcode values and a compact, parameterized phase descriptor per opcode.
 // This header is Verilog-friendly (no SystemVerilog structs) and portable.
@@ -43,8 +43,8 @@
 // -------------------------------
 
 // Helpers to pack/unpack the descriptor
-`define DESC( HasAddr, HasAlt, Dummy8, IInstr, IAddr, IAlt, IDummy, IData, Dir ) \
-    { 11'b0, Dir[0], IData[1:0], IDummy[1:0], IAlt[1:0], IAddr[1:0], IInstr[1:0], Dummy8[7:0], HasAlt[0], HasAddr[0] }
+`define DESC( HasAddr, HasAlt, Dummy8, IO_Instr, IO_Addr, IO_Alt, IO_Dummy, IO_Data, Dir ) \
+    { 11'b0, Dir[0], IO_Data[1:0], IO_Dummy[1:0], IO_Alt[1:0], IO_Addr[1:0], IO_Instr[1:0], Dummy8[7:0], HasAlt[0], HasAddr[0] }
 
 `define DESC_HAS_ADDR(d)      ( (d)[0] )
 `define DESC_HAS_ALT(d)       ( (d)[1] )
@@ -60,14 +60,10 @@
 // Common opcodes (JEDEC-like)
 // -------------------------------
 `define OP_READ_FAST          8'h0B  // 1-1-1 Fast Read (dummy)
+`define OP_READ_DUAL_OUT      8'h3B  // 1-1-2 Fast Read Dual Output
+`define OP_READ_QUAD_OUT      8'h6B  // 1-1-4 Fast Read Quad Output
 `define OP_READ_DUAL_IO       8'hBB  // 1-2-2 Fast Read Dual I/O (alt+dummy)
 `define OP_READ_QUAD_IO       8'hEB  // 1-4-4 Fast Read Quad I/O (alt+dummy)
-`define OP_WREN               8'h06  // Write Enable
-`define OP_WRDI               8'h04  // Write Disable
-`define OP_RDSR               8'h05  // Read Status Register
-`define OP_WRSR               8'h01  // Write Status Register
-`define OP_RDCR               8'h15  // Read Configuration Register
-`define OP_RDID               8'h9F  // Read JEDEC ID
 
 // -------------------------------
 // Default phase widths for popular commands (tunable):
@@ -102,33 +98,21 @@
 `define DESC_READ_FAST \
   `DESC( 1'b1, 1'b0, `DUMMY_FAST_READ_1_1_1[7:0], `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `DIR_READ )
 
+// 0x6B: Quad Output Fast Read (1-1-4), dummy, DATA=READ quad
+`define DESC_READ_QUAD_OUT \
+  `DESC( 1'b1, 1'b0, `DUMMY_READ_1_1_4[7:0], `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_4, `IO_WIDTH_4, `DIR_READ )
+
 // 0xEB: Quad I/O Fast Read (1-4-4), ALT present, dummy, DATA=READ quad
 `define DESC_READ_QUAD_IO \
   `DESC( 1'b1, 1'b1, `DUMMY_READ_1_4_4[7:0], `IO_WIDTH_1, `IO_WIDTH_4, `IO_WIDTH_4, `IO_WIDTH_4, `IO_WIDTH_4, `DIR_READ )
 
+// 0x3B: Dual Output Fast Read (1-1-2), dummy, DATA=READ dual
+`define DESC_READ_DUAL_OUT \
+  `DESC( 1'b1, 1'b0, `DUMMY_FAST_READ_1_1_1[7:0], `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_2, `IO_WIDTH_2, `DIR_READ )
+
 // 0xBB: Dual I/O Fast Read (1-2-2), ALT present, dummy, DATA=READ dual
 `define DESC_READ_DUAL_IO \
   `DESC( 1'b1, 1'b1, `DUMMY_FAST_READ_1_1_1[7:0], `IO_WIDTH_1, `IO_WIDTH_2, `IO_WIDTH_2, `IO_WIDTH_2, `IO_WIDTH_2, `DIR_READ )
-
-// 0x05: Read Status Register (1-1-1), DATA=READ single
-`define DESC_RDSR \
-  `DESC( 1'b0, 1'b0, 8'd0, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `DIR_READ )
-
-// 0x02: Page Program (1-1-1), DATA=WRITE single
-`define DESC_PP \
-  `DESC( 1'b1, 1'b0, 8'd0, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `DIR_WRITE )
-
-// 0x32: Quad Page Program (1-1-4), DATA=WRITE quad
-`define DESC_PP_QUAD \
-  `DESC( 1'b1, 1'b0, 8'd0, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_4, `IO_WIDTH_4, `DIR_WRITE )
-
-// 0x20/0x52/0xD8: Erases - address only, no data; model as DATA=READ w/ zero bytes
-`define DESC_ERASE_ADDR_ONLY \
-  `DESC( 1'b1, 1'b0, 8'd0, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `DIR_READ )
-
-// 0x06/0x04: WREN/WRDI - no addr, no data; treat as control (no data phase)
-`define DESC_CTRL_NO_DATA \
-  `DESC( 1'b0, 1'b0, 8'd0, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `IO_WIDTH_1, `DIR_READ )
 
 // -------------------------------
 // Central decode macro (case body snippet)
@@ -136,7 +120,6 @@
 //   reg [31:0] desc;
 //   always @* begin
 //     case (opcode)
-//       `OP_READ_SLOW:      desc = `DESC_READ_SLOW;
 //       `OP_READ_FAST:      desc = `DESC_READ_FAST;
 //       `OP_READ_QUAD_OUT:  desc = `DESC_READ_QUAD_OUT;
 //       `OP_READ_QUAD_IO:   desc = `DESC_READ_QUAD_IO;
@@ -144,11 +127,6 @@
 //       `OP_READ_DUAL_IO:   desc = `DESC_READ_DUAL_IO;
 //       `OP_RDID:           desc = `DESC_RDID;
 //       `OP_RDSR:           desc = `DESC_RDSR;
-//       `OP_PP:             desc = `DESC_PP;
-//       `OP_PP_QUAD:        desc = `DESC_PP_QUAD;
-//       `OP_SECTOR_ERASE,
-//       `OP_BLOCK_ERASE_32K,
-//       `OP_BLOCK_ERASE_64K:desc = `DESC_ERASE_ADDR_ONLY;
 //       `OP_WREN,
 //       `OP_WRDI:           desc = `DESC_CTRL_NO_DATA;
 //       default:                 desc = 32'b0; // unknown -> no phases
