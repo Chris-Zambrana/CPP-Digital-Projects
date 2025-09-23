@@ -8,6 +8,8 @@
 // You can safely include this in both RTL and TB.
 // -----------------------------------------------------------------------------
 
+`include "qspi_definitions.vh" 
+
 `ifndef OPCODE_TABLE_VH
 `define OPCODE_TABLE_VH
 
@@ -59,11 +61,25 @@
 // -------------------------------
 // Common opcodes (JEDEC-like)
 // -------------------------------
+
+//Reads
 `define OP_READ_FAST          8'h0B  // 1-1-1 Fast Read (dummy)
 `define OP_READ_DUAL_OUT      8'h3B  // 1-1-2 Fast Read Dual Output
 `define OP_READ_QUAD_OUT      8'h6B  // 1-1-4 Fast Read Quad Output
 `define OP_READ_DUAL_IO       8'hBB  // 1-2-2 Fast Read Dual I/O (alt+dummy)
 `define OP_READ_QUAD_IO       8'hEB  // 1-4-4 Fast Read Quad I/O (alt+dummy)
+`define OP_READ_FAST_DUAL     8'hBB  // 2-2-2
+`define OP_READ_FAST_QUAD     8'hEB  // 4-4-4
+
+// Writes
+`define OP_PAGE               8'h02  // 1-1-1 Page Program
+`define OP_PAGE_DUAL_IN    8'hA2  // 1-1-2 Dual Input Fast Program
+`define OP_PAGE_QUAD_IN    8'h32  // 1-1-4 Quad Input Fast Program
+`define OP_PAGE_DUAL_IO    8'hD2  // 1-2-2 Dual I/O Fast Program
+`define OP_PAGE_QUAD_IO    8'h38  // 1-4-4 Quad I/O Fast Program
+`define OP_PAGE_2_2_2      8'h82  // 2-2-2 Program
+`define OP_PAGE_4_4_4      8'h12  // 4-4-4 Program (some devices also use 0x38)
+
 
 // -------------------------------
 // Default phase widths for popular commands (tunable):
