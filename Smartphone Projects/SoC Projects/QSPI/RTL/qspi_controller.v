@@ -55,7 +55,7 @@ module qspi_controller
     wire [IO_WIDTH-1:0]       io_in;
     wire [SHIFT_REG_BITS-1:0] r_rx_data;
     wire [2:0]                current_phase;
-    wire [2:0]                  shift_width;
+    wire [1:0]                  shift_width;
     wire                        write_enable;
     wire [SHIFT_REG_BITS-1:0]         write_data;
 
@@ -239,10 +239,11 @@ module qspi_controller
                 r_dir      = `DIR_WRITE;
                 shift_data  = {SHIFT_REG_BITS{1'b0}};
                 case (shift_width) 
-                    3'd1: bit_length = dummy_cycles;
-                    3'd2: bit_length = dummy_cycles << 1;
-                    3'd4: bit_length = dummy_cycles << 2;
-                    default: bit_length = dummy_cycles; // fallback
+                    0: bit_length = 0;
+                    1: bit_length = dummy_cycles;
+                    2: bit_length = dummy_cycles << 1;
+                    3: bit_length = dummy_cycles << 2;
+                    default: bit_length = 0; // fallback
                 endcase
                 enable_transaction = 1;
             end
