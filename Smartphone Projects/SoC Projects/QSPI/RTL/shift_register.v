@@ -20,7 +20,7 @@ module shift_reg
     input  wire [SHIFT_REG_BITS-1:0]        data_in,
     input  wire [IO_WIDTH-1:0]     io_in,
     input  wire [$clog2(SHIFT_REG_BITS):0] bit_length,
-    input wire [2:0]               shift_width,
+    input wire [1:0]               shift_width,
     
     output reg  [SHIFT_REG_BITS-1:0]        data_out,
     output reg  [IO_WIDTH-1:0]     io_out,
@@ -29,7 +29,7 @@ module shift_reg
 
     reg [SHIFT_REG_BITS-1:0] shift_reg;
     reg [$clog2(SHIFT_REG_BITS):0] bit_count;
-    reg [2:0] r_shift_width;
+    reg [1:0] r_shift_width;
     reg [IO_WIDTH-1:0] masked_io_in;
 
 
@@ -39,10 +39,11 @@ module shift_reg
     always @(*) 
     begin
         case (r_shift_width)
-            3'd1: masked_io_in = {{(IO_WIDTH-1){1'b0}}, io_in[0]};
-            3'd2: masked_io_in = {{(IO_WIDTH-2){1'b0}}, io_in[1:0]};
-            3'd4: masked_io_in = io_in[IO_WIDTH-1:0];
-            default: masked_io_in = {{(IO_WIDTH-1){1'b0}}, io_in[0]};
+            0: masked_io_in = {(IO_WIDTH){1'b0}};
+            1: masked_io_in = {{(IO_WIDTH-1){1'b0}}, io_in[0]};
+            2: masked_io_in = {{(IO_WIDTH-2){1'b0}}, io_in[1:0]};
+            3: masked_io_in = io_in[IO_WIDTH-1:0];
+            default: masked_io_in = {(IO_WIDTH){1'b0}};
         endcase
     end
 
