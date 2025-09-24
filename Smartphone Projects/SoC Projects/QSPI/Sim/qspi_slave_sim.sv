@@ -42,9 +42,11 @@ module qspi_slave_sim #(
     int unsigned active_lanes;
     begin
       case (r_phase_mode)
-        2'd0: active_lanes = 1;
-        2'd1: active_lanes = 2;
-        default: active_lanes = 4;
+        0: active_lanes = 0;
+        1: active_lanes = 1;
+        2: active_lanes = 2;
+        3: active_lanes = 4;
+        default: active_lanes = 0;
       endcase
       return (active_lanes > IO_WIDTH) ? IO_WIDTH : active_lanes;
     end
