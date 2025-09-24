@@ -28,6 +28,7 @@ module io_ctrl
     
     // Build a width mask from mode (assumes IO_WIDTH >= 4)
     wire [IO_WIDTH-1:0] mode_mask =
+        (mode == `MODE_ZERO) ? {IO_WIDTH{1'b0}} :
         (mode == `MODE_SINGLE) ? {{(IO_WIDTH-1){1'b0}}, 1'b1} :
         (mode == `MODE_DUAL)   ? {{(IO_WIDTH-2){1'b0}}, 2'b11} :
         (mode == `MODE_QUAD)   ? 4'b1111 :
