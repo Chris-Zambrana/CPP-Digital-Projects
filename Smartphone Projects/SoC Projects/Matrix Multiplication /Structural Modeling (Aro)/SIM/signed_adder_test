@@ -1,0 +1,292 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x10094ba10 .scope module, "signed_adder_subtractor_tb" "signed_adder_subtractor_tb" 2 5;
+ .timescale -9 -12;
+P_0x71cc48fc0 .param/l "BIT_WIDTH" 1 2 7, +C4<00000000000000000000000000010000>;
+v0x71cc41680_0 .var/s "a", 15 0;
+v0x71cc41720_0 .var/s "b", 15 0;
+v0x71cc417c0_0 .var/s "expected", 15 0;
+v0x71cc41860_0 .var "operation", 0 0;
+v0x71cc41900_0 .net "overflow", 0 0, L_0x100956be0;  1 drivers
+v0x71cc419a0_0 .net/s "result", 15 0, L_0x71cc41a40;  1 drivers
+S_0x10094bb90 .scope module, "dut" "signed_adder_subtractor" 2 19, 3 5 0, S_0x10094ba10;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 16 "a";
+    .port_info 1 /INPUT 16 "b";
+    .port_info 2 /INPUT 1 "operation";
+    .port_info 3 /OUTPUT 16 "result";
+    .port_info 4 /OUTPUT 1 "overflow";
+P_0x71cc49040 .param/l "BIT_WIDTH" 0 3 7, +C4<00000000000000000000000000010000>;
+L_0x10094bd10 .functor NOT 16, v0x71cc41720_0, C4<0000000000000000>, C4<0000000000000000>, C4<0000000000000000>;
+L_0x100952860 .functor XNOR 1, L_0x71cc41ae0, L_0x71cc41b80, C4<0>, C4<0>;
+L_0x100948680 .functor XOR 1, L_0x71cc41c20, L_0x71cc41cc0, C4<0>, C4<0>;
+L_0x1009486f0 .functor AND 1, L_0x100952860, L_0x100948680, C4<1>, C4<1>;
+L_0x1009487d0 .functor XOR 1, L_0x71cc41d60, L_0x71cc41e00, C4<0>, C4<0>;
+L_0x100956b00 .functor XOR 1, L_0x71cc41ea0, L_0x71cc41f40, C4<0>, C4<0>;
+L_0x100956b70 .functor AND 1, L_0x1009487d0, L_0x100956b00, C4<1>, C4<1>;
+v0x71cc40280_0 .net *"_ivl_0", 15 0, L_0x10094bd10;  1 drivers
+L_0x71d454058 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x71cc40320_0 .net *"_ivl_11", 0 0, L_0x71d454058;  1 drivers
+v0x71cc403c0_0 .net *"_ivl_12", 16 0, L_0x71d04c1e0;  1 drivers
+L_0x71d4540a0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x71cc40460_0 .net *"_ivl_15", 0 0, L_0x71d4540a0;  1 drivers
+L_0x71d454010 .functor BUFT 1, C4<0000000000000001>, C4<0>, C4<0>, C4<0>;
+v0x71cc40500_0 .net/2s *"_ivl_2", 15 0, L_0x71d454010;  1 drivers
+v0x71cc405a0_0 .net *"_ivl_20", 31 0, L_0x71d04c280;  1 drivers
+L_0x71d4540e8 .functor BUFT 1, C4<0000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x71cc40640_0 .net *"_ivl_23", 30 0, L_0x71d4540e8;  1 drivers
+L_0x71d454130 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x71cc406e0_0 .net/2u *"_ivl_24", 31 0, L_0x71d454130;  1 drivers
+v0x71cc40780_0 .net *"_ivl_26", 0 0, L_0x100952480;  1 drivers
+v0x71cc40820_0 .net *"_ivl_29", 0 0, L_0x71cc41ae0;  1 drivers
+v0x71cc408c0_0 .net *"_ivl_31", 0 0, L_0x71cc41b80;  1 drivers
+v0x71cc40960_0 .net *"_ivl_32", 0 0, L_0x100952860;  1 drivers
+v0x71cc40a00_0 .net *"_ivl_35", 0 0, L_0x71cc41c20;  1 drivers
+v0x71cc40aa0_0 .net *"_ivl_37", 0 0, L_0x71cc41cc0;  1 drivers
+v0x71cc40b40_0 .net *"_ivl_38", 0 0, L_0x100948680;  1 drivers
+v0x71cc40be0_0 .net *"_ivl_41", 0 0, L_0x1009486f0;  1 drivers
+v0x71cc40c80_0 .net *"_ivl_43", 0 0, L_0x71cc41d60;  1 drivers
+v0x71cc40d20_0 .net *"_ivl_45", 0 0, L_0x71cc41e00;  1 drivers
+v0x71cc40dc0_0 .net *"_ivl_46", 0 0, L_0x1009487d0;  1 drivers
+v0x71cc40e60_0 .net *"_ivl_49", 0 0, L_0x71cc41ea0;  1 drivers
+v0x71cc40f00_0 .net *"_ivl_51", 0 0, L_0x71cc41f40;  1 drivers
+v0x71cc40fa0_0 .net *"_ivl_52", 0 0, L_0x100956b00;  1 drivers
+v0x71cc41040_0 .net *"_ivl_55", 0 0, L_0x100956b70;  1 drivers
+v0x71cc410e0_0 .net *"_ivl_8", 16 0, L_0x71d04c140;  1 drivers
+v0x71cc41180_0 .net/s "a", 15 0, v0x71cc41680_0;  1 drivers
+v0x71cc41220_0 .net/s "b", 15 0, v0x71cc41720_0;  1 drivers
+v0x71cc412c0_0 .net "b_complement", 15 0, L_0x71cc4c320;  1 drivers
+v0x71cc41360_0 .net "b_processed", 15 0, L_0x1009527c0;  1 drivers
+v0x71cc41400_0 .net "extended_result", 16 0, L_0x71cc4c3c0;  1 drivers
+v0x71cc414a0_0 .net "operation", 0 0, v0x71cc41860_0;  1 drivers
+v0x71cc41540_0 .net "overflow", 0 0, L_0x100956be0;  alias, 1 drivers
+v0x71cc415e0_0 .net/s "result", 15 0, L_0x71cc41a40;  alias, 1 drivers
+L_0x71cc4c320 .arith/sum 16, L_0x10094bd10, L_0x71d454010;
+L_0x1009527c0 .functor MUXZ 16, v0x71cc41720_0, L_0x71cc4c320, v0x71cc41860_0, C4<>;
+L_0x71d04c140 .concat [ 16 1 0 0], v0x71cc41680_0, L_0x71d454058;
+L_0x71d04c1e0 .concat [ 16 1 0 0], L_0x1009527c0, L_0x71d4540a0;
+L_0x71cc4c3c0 .arith/sum 17, L_0x71d04c140, L_0x71d04c1e0;
+L_0x71cc41a40 .part L_0x71cc4c3c0, 0, 16;
+L_0x71d04c280 .concat [ 1 31 0 0], v0x71cc41860_0, L_0x71d4540e8;
+L_0x100952480 .cmp/eq 32, L_0x71d04c280, L_0x71d454130;
+L_0x71cc41ae0 .part v0x71cc41680_0, 15, 1;
+L_0x71cc41b80 .part v0x71cc41720_0, 15, 1;
+L_0x71cc41c20 .part L_0x71cc41a40, 15, 1;
+L_0x71cc41cc0 .part v0x71cc41680_0, 15, 1;
+L_0x71cc41d60 .part v0x71cc41680_0, 15, 1;
+L_0x71cc41e00 .part v0x71cc41720_0, 15, 1;
+L_0x71cc41ea0 .part L_0x71cc41a40, 15, 1;
+L_0x71cc41f40 .part v0x71cc41680_0, 15, 1;
+L_0x100956be0 .functor MUXZ 1, L_0x100956b70, L_0x1009486f0, L_0x100952480, C4<>;
+    .scope S_0x10094ba10;
+T_0 ;
+    %vpi_call 2 28 "$display", "=== Signed Adder/Subtractor Testbench ===" {0 0 0};
+    %vpi_call 2 29 "$display", "Time\011a\011\011b\011\011op\011result\011\011expected\011overflow\011match" {0 0 0};
+    %vpi_call 2 30 "$display", "----\011----\011\011----\011\011--\011------\011\011--------\011--------\011-----" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x71cc41860_0, 0, 1;
+    %pushi/vec4 4660, 0, 16;
+    %store/vec4 v0x71cc41680_0, 0, 16;
+    %pushi/vec4 22136, 0, 16;
+    %store/vec4 v0x71cc41720_0, 0, 16;
+    %load/vec4 v0x71cc41680_0;
+    %load/vec4 v0x71cc41720_0;
+    %add;
+    %store/vec4 v0x71cc417c0_0, 0, 16;
+    %delay 10000, 0;
+    %load/vec4 v0x71cc419a0_0;
+    %load/vec4 v0x71cc417c0_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.0, 8;
+    %pushi/vec4 1346458451, 0, 32; draw_string_vec4
+    %jmp/1 T_0.1, 8;
+T_0.0 ; End of true expr.
+    %pushi/vec4 1178683724, 0, 32; draw_string_vec4
+    %jmp/0 T_0.1, 8;
+ ; End of false expr.
+    %blend;
+T_0.1;
+    %vpi_call 2 38 "$display", "%0t\011%h\011%h\011%b\011%h\011%h\011%b\011\011%s", $time, v0x71cc41680_0, v0x71cc41720_0, v0x71cc41860_0, v0x71cc419a0_0, v0x71cc417c0_0, v0x71cc41900_0, S<0,vec4,u32> {1 0 0};
+    %pushi/vec4 4096, 0, 16;
+    %store/vec4 v0x71cc41680_0, 0, 16;
+    %pushi/vec4 63488, 0, 16;
+    %store/vec4 v0x71cc41720_0, 0, 16;
+    %load/vec4 v0x71cc41680_0;
+    %load/vec4 v0x71cc41720_0;
+    %add;
+    %store/vec4 v0x71cc417c0_0, 0, 16;
+    %delay 10000, 0;
+    %load/vec4 v0x71cc419a0_0;
+    %load/vec4 v0x71cc417c0_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.2, 8;
+    %pushi/vec4 1346458451, 0, 32; draw_string_vec4
+    %jmp/1 T_0.3, 8;
+T_0.2 ; End of true expr.
+    %pushi/vec4 1178683724, 0, 32; draw_string_vec4
+    %jmp/0 T_0.3, 8;
+ ; End of false expr.
+    %blend;
+T_0.3;
+    %vpi_call 2 45 "$display", "%0t\011%h\011%h\011%b\011%h\011%h\011%b\011\011%s", $time, v0x71cc41680_0, v0x71cc41720_0, v0x71cc41860_0, v0x71cc419a0_0, v0x71cc417c0_0, v0x71cc41900_0, S<0,vec4,u32> {1 0 0};
+    %pushi/vec4 61440, 0, 16;
+    %store/vec4 v0x71cc41680_0, 0, 16;
+    %pushi/vec4 57344, 0, 16;
+    %store/vec4 v0x71cc41720_0, 0, 16;
+    %load/vec4 v0x71cc41680_0;
+    %load/vec4 v0x71cc41720_0;
+    %add;
+    %store/vec4 v0x71cc417c0_0, 0, 16;
+    %delay 10000, 0;
+    %load/vec4 v0x71cc419a0_0;
+    %load/vec4 v0x71cc417c0_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.4, 8;
+    %pushi/vec4 1346458451, 0, 32; draw_string_vec4
+    %jmp/1 T_0.5, 8;
+T_0.4 ; End of true expr.
+    %pushi/vec4 1178683724, 0, 32; draw_string_vec4
+    %jmp/0 T_0.5, 8;
+ ; End of false expr.
+    %blend;
+T_0.5;
+    %vpi_call 2 52 "$display", "%0t\011%h\011%h\011%b\011%h\011%h\011%b\011\011%s", $time, v0x71cc41680_0, v0x71cc41720_0, v0x71cc41860_0, v0x71cc419a0_0, v0x71cc417c0_0, v0x71cc41900_0, S<0,vec4,u32> {1 0 0};
+    %pushi/vec4 32767, 0, 16;
+    %store/vec4 v0x71cc41680_0, 0, 16;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v0x71cc41720_0, 0, 16;
+    %load/vec4 v0x71cc41680_0;
+    %load/vec4 v0x71cc41720_0;
+    %add;
+    %store/vec4 v0x71cc417c0_0, 0, 16;
+    %delay 10000, 0;
+    %load/vec4 v0x71cc41900_0;
+    %flag_set/vec4 8;
+    %jmp/0 T_0.6, 8;
+    %pushi/vec4 1346458451, 0, 32; draw_string_vec4
+    %pushi/vec4 676283945, 0, 32; draw_string_vec4
+    %concat/vec4; draw_string_vec4
+    %jmp/1 T_0.7, 8;
+T_0.6 ; End of true expr.
+    %pushi/vec4 0, 0, 32; draw_string_vec4
+    %pushi/vec4 1178683724, 0, 32; draw_string_vec4
+    %concat/vec4; draw_string_vec4
+    %jmp/0 T_0.7, 8;
+ ; End of false expr.
+    %blend;
+T_0.7;
+    %vpi_call 2 59 "$display", "%0t\011%h\011%h\011%b\011%h\011%h\011%b\011\011%s", $time, v0x71cc41680_0, v0x71cc41720_0, v0x71cc41860_0, v0x71cc419a0_0, v0x71cc417c0_0, v0x71cc41900_0, S<0,vec4,u64> {1 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x71cc41860_0, 0, 1;
+    %pushi/vec4 22136, 0, 16;
+    %store/vec4 v0x71cc41680_0, 0, 16;
+    %pushi/vec4 4660, 0, 16;
+    %store/vec4 v0x71cc41720_0, 0, 16;
+    %load/vec4 v0x71cc41680_0;
+    %load/vec4 v0x71cc41720_0;
+    %sub;
+    %store/vec4 v0x71cc417c0_0, 0, 16;
+    %delay 10000, 0;
+    %load/vec4 v0x71cc419a0_0;
+    %load/vec4 v0x71cc417c0_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.8, 8;
+    %pushi/vec4 1346458451, 0, 32; draw_string_vec4
+    %jmp/1 T_0.9, 8;
+T_0.8 ; End of true expr.
+    %pushi/vec4 1178683724, 0, 32; draw_string_vec4
+    %jmp/0 T_0.9, 8;
+ ; End of false expr.
+    %blend;
+T_0.9;
+    %vpi_call 2 69 "$display", "%0t\011%h\011%h\011%b\011%h\011%h\011%b\011\011%s", $time, v0x71cc41680_0, v0x71cc41720_0, v0x71cc41860_0, v0x71cc419a0_0, v0x71cc417c0_0, v0x71cc41900_0, S<0,vec4,u32> {1 0 0};
+    %pushi/vec4 4096, 0, 16;
+    %store/vec4 v0x71cc41680_0, 0, 16;
+    %pushi/vec4 61440, 0, 16;
+    %store/vec4 v0x71cc41720_0, 0, 16;
+    %load/vec4 v0x71cc41680_0;
+    %load/vec4 v0x71cc41720_0;
+    %sub;
+    %store/vec4 v0x71cc417c0_0, 0, 16;
+    %delay 10000, 0;
+    %load/vec4 v0x71cc419a0_0;
+    %load/vec4 v0x71cc417c0_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.10, 8;
+    %pushi/vec4 1346458451, 0, 32; draw_string_vec4
+    %jmp/1 T_0.11, 8;
+T_0.10 ; End of true expr.
+    %pushi/vec4 1178683724, 0, 32; draw_string_vec4
+    %jmp/0 T_0.11, 8;
+ ; End of false expr.
+    %blend;
+T_0.11;
+    %vpi_call 2 76 "$display", "%0t\011%h\011%h\011%b\011%h\011%h\011%b\011\011%s", $time, v0x71cc41680_0, v0x71cc41720_0, v0x71cc41860_0, v0x71cc419a0_0, v0x71cc417c0_0, v0x71cc41900_0, S<0,vec4,u32> {1 0 0};
+    %pushi/vec4 61440, 0, 16;
+    %store/vec4 v0x71cc41680_0, 0, 16;
+    %pushi/vec4 4096, 0, 16;
+    %store/vec4 v0x71cc41720_0, 0, 16;
+    %load/vec4 v0x71cc41680_0;
+    %load/vec4 v0x71cc41720_0;
+    %sub;
+    %store/vec4 v0x71cc417c0_0, 0, 16;
+    %delay 10000, 0;
+    %load/vec4 v0x71cc419a0_0;
+    %load/vec4 v0x71cc417c0_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.12, 8;
+    %pushi/vec4 1346458451, 0, 32; draw_string_vec4
+    %jmp/1 T_0.13, 8;
+T_0.12 ; End of true expr.
+    %pushi/vec4 1178683724, 0, 32; draw_string_vec4
+    %jmp/0 T_0.13, 8;
+ ; End of false expr.
+    %blend;
+T_0.13;
+    %vpi_call 2 83 "$display", "%0t\011%h\011%h\011%b\011%h\011%h\011%b\011\011%s", $time, v0x71cc41680_0, v0x71cc41720_0, v0x71cc41860_0, v0x71cc419a0_0, v0x71cc417c0_0, v0x71cc41900_0, S<0,vec4,u32> {1 0 0};
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x71cc41680_0, 0, 16;
+    %pushi/vec4 4660, 0, 16;
+    %store/vec4 v0x71cc41720_0, 0, 16;
+    %load/vec4 v0x71cc41680_0;
+    %load/vec4 v0x71cc41720_0;
+    %sub;
+    %store/vec4 v0x71cc417c0_0, 0, 16;
+    %delay 10000, 0;
+    %load/vec4 v0x71cc419a0_0;
+    %load/vec4 v0x71cc417c0_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_0.14, 8;
+    %pushi/vec4 1346458451, 0, 32; draw_string_vec4
+    %jmp/1 T_0.15, 8;
+T_0.14 ; End of true expr.
+    %pushi/vec4 1178683724, 0, 32; draw_string_vec4
+    %jmp/0 T_0.15, 8;
+ ; End of false expr.
+    %blend;
+T_0.15;
+    %vpi_call 2 90 "$display", "%0t\011%h\011%h\011%b\011%h\011%h\011%b\011\011%s", $time, v0x71cc41680_0, v0x71cc41720_0, v0x71cc41860_0, v0x71cc419a0_0, v0x71cc417c0_0, v0x71cc41900_0, S<0,vec4,u32> {1 0 0};
+    %vpi_call 2 94 "$display", "\012=== Test Complete ===" {0 0 0};
+    %vpi_call 2 95 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "../sim/signed_adder_subtractor_tb.v";
+    "signed_adder_subtractor.v";
