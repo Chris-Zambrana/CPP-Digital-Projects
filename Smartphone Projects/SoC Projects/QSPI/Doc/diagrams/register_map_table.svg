@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1057" viewBox="0 0 1280 1057">
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .title { font: 700 34px Arial, Helvetica, sans-serif; fill: #162033; }
+      .subtitle { font: 400 16px Arial, Helvetica, sans-serif; fill: #4f5b6f; }
+      .table-outline { fill: #ffffff; stroke: #c8d0df; stroke-width: 2; }
+      .header { fill: #24324a; }
+      .header-text { font: 700 16px Arial, Helvetica, sans-serif; fill: #ffffff; }
+      .row-even { fill: #ffffff; }
+      .row-odd { fill: #f1f4f9; }
+      .cell-line { stroke: #d7deea; stroke-width: 1; }
+      .offset { font: 700 17px Consolas, "Courier New", monospace; fill: #26364f; }
+      .access { font: 700 15px Arial, Helvetica, sans-serif; fill: #31516f; }
+      .reg { font: 700 18px Arial, Helvetica, sans-serif; fill: #18243a; }
+      .field { font: 700 13px Consolas, "Courier New", monospace; fill: #162033; }
+      .field-small { font: 700 11px Consolas, "Courier New", monospace; fill: #162033; }
+      .reserved { fill: #e8edf5; stroke: #c8d0df; stroke-width: 1; }
+      .control { fill: #d9ecff; stroke: #7bb7e6; stroke-width: 1.2; }
+      .status { fill: #dcf7e7; stroke: #7ac79a; stroke-width: 1.2; }
+      .cmd { fill: #ffe9cf; stroke: #e3a357; stroke-width: 1.2; }
+      .data { fill: #f0e3ff; stroke: #b38ae6; stroke-width: 1.2; }
+      .timing { fill: #fff7c9; stroke: #d4bd48; stroke-width: 1.2; }
+      .addr { fill: #dff6f8; stroke: #65bfc8; stroke-width: 1.2; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1280" height="1057"/>
+
+  <text class="title" x="70" y="62">QSPI Controller Register Map</text>
+  <text class="subtitle" x="72" y="92">Word-addressable CSR map for the lean first-revision CPU interface</text>
+
+  <rect class="table-outline" x="70" y="125" width="1140" height="854" rx="10"/>
+  <rect class="header" x="70" y="125" width="1140" height="48" rx="10"/>
+  <rect class="header" x="70" y="149" width="1140" height="24"/>
+
+  <text class="header-text" x="95" y="155">Offset</text>
+  <text class="header-text" x="205" y="155">Access</text>
+  <text class="header-text" x="305" y="155">Register</text>
+  <text class="header-text" x="500" y="155">Bit Fields</text>
+
+  <line class="cell-line" x1="180" y1="125" x2="180" y2="979"/>
+  <line class="cell-line" x1="280" y1="125" x2="280" y2="979"/>
+  <line class="cell-line" x1="470" y1="125" x2="470" y2="979"/>
+
+  <rect class="row-even" x="70" y="173" width="1140" height="67"/>
+  <rect class="row-odd" x="70" y="240" width="1140" height="67"/>
+  <rect class="row-even" x="70" y="307" width="1140" height="67"/>
+  <rect class="row-odd" x="70" y="374" width="1140" height="67"/>
+  <rect class="row-even" x="70" y="441" width="1140" height="67"/>
+  <rect class="row-odd" x="70" y="508" width="1140" height="67"/>
+  <rect class="row-even" x="70" y="575" width="1140" height="67"/>
+  <rect class="row-odd" x="70" y="642" width="1140" height="67"/>
+  <rect class="row-even" x="70" y="709" width="1140" height="67"/>
+  <rect class="row-odd" x="70" y="776" width="1140" height="69"/>
+  <rect class="row-even" x="70" y="845" width="1140" height="67"/>
+  <rect class="row-odd" x="70" y="912" width="1140" height="67"/>
+
+  <line class="cell-line" x1="70" y1="240" x2="1210" y2="240"/>
+  <line class="cell-line" x1="70" y1="307" x2="1210" y2="307"/>
+  <line class="cell-line" x1="70" y1="374" x2="1210" y2="374"/>
+  <line class="cell-line" x1="70" y1="441" x2="1210" y2="441"/>
+  <line class="cell-line" x1="70" y1="508" x2="1210" y2="508"/>
+  <line class="cell-line" x1="70" y1="575" x2="1210" y2="575"/>
+  <line class="cell-line" x1="70" y1="642" x2="1210" y2="642"/>
+  <line class="cell-line" x1="70" y1="709" x2="1210" y2="709"/>
+  <line class="cell-line" x1="70" y1="776" x2="1210" y2="776"/>
+  <line class="cell-line" x1="70" y1="845" x2="1210" y2="845"/>
+  <line class="cell-line" x1="70" y1="912" x2="1210" y2="912"/>
+
+  <!-- 0x0 PULSE -->
+  <text class="offset" x="95" y="214">0x0</text>
+  <text class="access" x="225" y="214">W</text>
+  <text class="reg" x="305" y="214">PULSE</text>
+  <rect class="reserved" x="500" y="190" width="360" height="28" rx="4"/><text class="field" x="660" y="209">RSV</text>
+  <rect class="control" x="870" y="190" width="126" height="28" rx="4"/><text class="field-small" x="880" y="209">SOFT_RESET</text>
+  <rect class="control" x="1006" y="190" width="82" height="28" rx="4"/><text class="field-small" x="1018" y="209">START</text>
+
+  <!-- 0x1 CONTROL -->
+  <text class="offset" x="95" y="281">0x1</text>
+  <text class="access" x="225" y="281">W</text>
+  <text class="reg" x="305" y="281">CONTROL</text>
+  <rect class="reserved" x="500" y="257" width="360" height="28" rx="4"/><text class="field" x="660" y="276">RSV</text>
+  <rect class="control" x="870" y="257" width="116" height="28" rx="4"/><text class="field-small" x="880" y="276">LSB_FIRST</text>
+  <rect class="control" x="996" y="257" width="72" height="28" rx="4"/><text class="field-small" x="1006" y="276">CPHA</text>
+  <rect class="control" x="1078" y="257" width="72" height="28" rx="4"/><text class="field-small" x="1088" y="276">CPOL</text>
+
+  <!-- 0x2 STATUS -->
+  <text class="offset" x="95" y="348">0x2</text>
+  <text class="access" x="225" y="348">R</text>
+  <text class="reg" x="305" y="348">STATUS</text>
+  <rect class="reserved" x="500" y="324" width="130" height="28" rx="4"/><text class="field-small" x="553" y="343">RSV</text>
+  <rect class="status" x="638" y="324" width="108" height="28" rx="4"/><text class="field-small" x="648" y="343">RX_EMPTY</text>
+  <rect class="status" x="754" y="324" width="94" height="28" rx="4"/><text class="field-small" x="764" y="343">TX_FULL</text>
+  <rect class="status" x="856" y="324" width="82" height="28" rx="4"/><text class="field-small" x="866" y="343">ERROR</text>
+  <rect class="status" x="946" y="324" width="74" height="28" rx="4"/><text class="field-small" x="958" y="343">DONE</text>
+  <rect class="status" x="1028" y="324" width="76" height="28" rx="4"/><text class="field-small" x="1038" y="343">READY</text>
+
+  <!-- 0x3 CLK_DIV -->
+  <text class="offset" x="95" y="415">0x3</text>
+  <text class="access" x="225" y="415">W</text>
+  <text class="reg" x="305" y="415">CLK_DIV</text>
+  <rect class="reserved" x="500" y="391" width="190" height="28" rx="4"/><text class="field" x="575" y="410">RSV</text>
+  <rect class="timing" x="700" y="391" width="210" height="28" rx="4"/><text class="field" x="754" y="410">DIVIDER</text>
+
+  <!-- 0x4 CMD -->
+  <text class="offset" x="95" y="482">0x4</text>
+  <text class="access" x="225" y="482">W</text>
+  <text class="reg" x="305" y="482">CMD</text>
+  <rect class="reserved" x="500" y="453" width="112" height="24" rx="4"/><text class="field-small" x="545" y="469">RSV</text>
+  <rect class="cmd" x="620" y="453" width="116" height="24" rx="4"/><text class="field-small" x="630" y="469">DATA_BUS</text>
+  <rect class="cmd" x="744" y="453" width="116" height="24" rx="4"/><text class="field-small" x="754" y="469">MODE_BUS</text>
+  <rect class="cmd" x="868" y="453" width="114" height="24" rx="4"/><text class="field-small" x="878" y="469">ADDR_BUS</text>
+  <rect class="cmd" x="990" y="453" width="100" height="24" rx="4"/><text class="field-small" x="1000" y="469">CMD_W</text>
+  <rect class="cmd" x="1098" y="453" width="102" height="24" rx="4"/><text class="field-small" x="1108" y="469">ADDR_W</text>
+  <rect class="cmd" x="500" y="481" width="66" height="24" rx="4"/><text class="field-small" x="520" y="497">RX</text>
+  <rect class="cmd" x="574" y="481" width="66" height="24" rx="4"/><text class="field-small" x="594" y="497">TX</text>
+  <rect class="cmd" x="648" y="481" width="84" height="24" rx="4"/><text class="field-small" x="658" y="497">DUMMY</text>
+  <rect class="cmd" x="740" y="481" width="76" height="24" rx="4"/><text class="field-small" x="750" y="497">MODE</text>
+  <rect class="cmd" x="824" y="481" width="70" height="24" rx="4"/><text class="field-small" x="834" y="497">ADDR</text>
+  <rect class="cmd" x="902" y="481" width="106" height="24" rx="4"/><text class="field-small" x="928" y="497">OPCODE</text>
+
+  <!-- 0x5 FADDR -->
+  <text class="offset" x="95" y="549">0x5</text>
+  <text class="access" x="225" y="549">W</text>
+  <text class="reg" x="305" y="549">FADDR</text>
+  <rect class="addr" x="500" y="525" width="340" height="28" rx="4"/><text class="field" x="594" y="544">FLASH_ADDR</text>
+
+  <!-- 0x6 TX_LEN -->
+  <text class="offset" x="95" y="616">0x6</text>
+  <text class="access" x="225" y="616">W</text>
+  <text class="reg" x="305" y="616">TX_LEN</text>
+  <rect class="reserved" x="500" y="592" width="190" height="28" rx="4"/><text class="field" x="575" y="611">RSV</text>
+  <rect class="data" x="700" y="592" width="210" height="28" rx="4"/><text class="field" x="767" y="611">tx_len</text>
+
+  <!-- 0x7 RX_LEN -->
+  <text class="offset" x="95" y="683">0x7</text>
+  <text class="access" x="225" y="683">W</text>
+  <text class="reg" x="305" y="683">RX_LEN</text>
+  <rect class="reserved" x="500" y="659" width="190" height="28" rx="4"/><text class="field" x="575" y="678">RSV</text>
+  <rect class="data" x="700" y="659" width="210" height="28" rx="4"/><text class="field" x="767" y="678">rx_len</text>
+
+  <!-- 0x8 DUMMY -->
+  <text class="offset" x="95" y="750">0x8</text>
+  <text class="access" x="225" y="750">W</text>
+  <text class="reg" x="305" y="750">DUMMY</text>
+  <rect class="reserved" x="500" y="726" width="120" height="28" rx="4"/><text class="field-small" x="549" y="745">RSV</text>
+  <rect class="timing" x="630" y="726" width="126" height="28" rx="4"/><text class="field-small" x="642" y="745">MODE_BITS</text>
+  <rect class="timing" x="766" y="726" width="140" height="28" rx="4"/><text class="field-small" x="778" y="745">MODE_CYCLES</text>
+  <rect class="timing" x="916" y="726" width="150" height="28" rx="4"/><text class="field-small" x="928" y="745">DUMMY_CYCLES</text>
+
+  <!-- 0x9 TXDATA -->
+  <text class="offset" x="95" y="818">0x9</text>
+  <text class="access" x="225" y="818">W</text>
+  <text class="reg" x="305" y="818">TXDATA</text>
+  <rect class="data" x="500" y="794" width="255" height="28" rx="4"/><text class="field" x="588" y="813">TXDATA</text>
+
+  <!-- 0xA RXDATA -->
+  <text class="offset" x="95" y="885">0xA</text>
+  <text class="access" x="225" y="885">R</text>
+  <text class="reg" x="305" y="885">RXDATA</text>
+  <rect class="data" x="500" y="861" width="255" height="28" rx="4"/><text class="field" x="588" y="880">RXDATA</text>
+
+  <!-- 0xB CS_SELECT -->
+  <text class="offset" x="95" y="952">0xB</text>
+  <text class="access" x="225" y="952">W</text>
+  <text class="reg" x="305" y="952">CS_SELECT</text>
+  <rect class="reserved" x="500" y="928" width="210" height="28" rx="4"/><text class="field-small" x="594" y="947">RSV</text>
+  <rect class="control" x="720" y="928" width="190" height="28" rx="4"/><text class="field-small" x="793" y="947">CS_NUM</text>
+</svg>

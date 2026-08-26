@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1228" viewBox="0 0 4300 3300">
+  <defs>
+    <style>
+      .bg { fill: #0f1115; }
+      .outer { fill: none; stroke: #d8c2ff; stroke-width: 6; }
+      .block { fill: #171a21; stroke: #f4f0e8; stroke-width: 4; rx: 8; ry: 8; }
+      .wire { fill: none; stroke: #f4f0e8; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .bus { fill: none; stroke: #f4f0e8; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .flash { fill: none; stroke: #f4f0e8; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .title { fill: #f4f0e8; font-family: Consolas, "Courier New", monospace; font-size: 40px; }
+      .sig { fill: #7ac943; font-family: Consolas, "Courier New", monospace; font-size: 25px; }
+      .blue { fill: #7ac943; font-family: Consolas, "Courier New", monospace; font-size: 25px; }
+      .red { fill: #7ac943; font-family: Consolas, "Courier New", monospace; font-size: 25px; }
+      .dot { fill: #f4f0e8; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="4300" height="3300"/>
+  <rect class="outer" x="260" y="80" width="3780" height="3100" rx="70"/>
+  <text class="title" x="320" y="55">top_qspi_core</text>
+
+  <rect class="block" x="540" y="780" width="760" height="1210"/>
+  <text class="title" x="765" y="740">qspi_csr_map</text>
+  <text class="sig" x="580" y="850">clk</text>
+  <text class="sig" x="580" y="890">reset</text>
+  <text class="sig" x="580" y="930">cs</text>
+  <text class="sig" x="580" y="970">read</text>
+  <text class="sig" x="580" y="1010">write</text>
+  <text class="sig" x="580" y="1050">addr</text>
+  <text class="sig" x="580" y="1090">wr_data</text>
+  <text class="sig" x="580" y="1160">ready</text>
+  <text class="sig" x="580" y="1200">done</text>
+  <text class="sig" x="580" y="1240">error</text>
+  <text class="sig" x="580" y="1310">fifo_tx_full</text>
+  <text class="sig" x="580" y="1350">fifo_rx_empty</text>
+  <text class="sig" x="580" y="1390">fifo_rx_rbyte</text>
+  <text class="sig" x="1260" y="850" text-anchor="end">rd_data</text>
+  <text class="sig" x="1260" y="890" text-anchor="end">start</text>
+  <text class="sig" x="1260" y="930" text-anchor="end">soft_reset</text>
+  <text class="sig" x="1260" y="970" text-anchor="end">cpol</text>
+  <text class="sig" x="1260" y="1010" text-anchor="end">cpha</text>
+  <text class="sig" x="1260" y="1050" text-anchor="end">lsb_first</text>
+  <text class="sig" x="1260" y="1090" text-anchor="end">clk_div</text>
+  <text class="sig" x="1260" y="1130" text-anchor="end">opcode</text>
+  <text class="sig" x="1260" y="1170" text-anchor="end">has_addr</text>
+  <text class="sig" x="1260" y="1210" text-anchor="end">has_mode</text>
+  <text class="sig" x="1260" y="1250" text-anchor="end">has_dummy</text>
+  <text class="sig" x="1260" y="1290" text-anchor="end">has_tx_data</text>
+  <text class="sig" x="1260" y="1330" text-anchor="end">has_rx_data</text>
+  <text class="sig" x="1260" y="1370" text-anchor="end">addr_bit_width</text>
+  <text class="sig" x="1260" y="1410" text-anchor="end">cmd_io_width</text>
+  <text class="sig" x="1260" y="1450" text-anchor="end">addr_io_width</text>
+  <text class="sig" x="1260" y="1490" text-anchor="end">mode_io_width</text>
+  <text class="sig" x="1260" y="1530" text-anchor="end">data_io_width</text>
+  <text class="sig" x="1260" y="1570" text-anchor="end">flash_addr</text>
+  <text class="sig" x="1260" y="1610" text-anchor="end">tx_len</text>
+  <text class="sig" x="1260" y="1650" text-anchor="end">rx_len</text>
+  <text class="sig" x="1260" y="1690" text-anchor="end">dummy_cycles</text>
+  <text class="sig" x="1260" y="1730" text-anchor="end">mode_cycles</text>
+  <text class="sig" x="1260" y="1770" text-anchor="end">mode_bits</text>
+  <text class="sig" x="1260" y="1810" text-anchor="end">cs_num</text>
+  <text class="sig" x="1260" y="1850" text-anchor="end">fifo_tx_wr</text>
+  <text class="sig" x="1260" y="1890" text-anchor="end">fifo_tx_wbyte</text>
+  <text class="sig" x="1260" y="1930" text-anchor="end">fifo_rx_rd</text>
+
+  <rect class="block" x="1850" y="720" width="800" height="1200"/>
+  <text class="title" x="2055" y="680">qspi_controller</text>
+  <text class="sig" x="1890" y="790">clk</text>
+  <text class="sig" x="1890" y="830">reset</text>
+  <text class="sig" x="1890" y="870">start</text>
+  <text class="sig" x="1890" y="910">soft_reset</text>
+  <text class="sig" x="1890" y="950">opcode</text>
+  <text class="sig" x="1890" y="990">has_addr</text>
+  <text class="sig" x="1890" y="1030">has_mode</text>
+  <text class="sig" x="1890" y="1070">has_dummy</text>
+  <text class="sig" x="1890" y="1110">has_tx_data</text>
+  <text class="sig" x="1890" y="1150">has_rx_data</text>
+  <text class="sig" x="1890" y="1190">addr_bit_width</text>
+  <text class="sig" x="1890" y="1230">cmd_io_width</text>
+  <text class="sig" x="1890" y="1270">addr_io_width</text>
+  <text class="sig" x="1890" y="1310">mode_io_width</text>
+  <text class="sig" x="1890" y="1350">data_io_width</text>
+  <text class="sig" x="1890" y="1390">flash_addr</text>
+  <text class="sig" x="1890" y="1430">cs_num</text>
+  <text class="sig" x="1890" y="1470">tx_len</text>
+  <text class="sig" x="1890" y="1510">rx_len</text>
+  <text class="sig" x="1890" y="1550">dummy_cycles</text>
+  <text class="sig" x="1890" y="1590">mode_cycles</text>
+  <text class="sig" x="1890" y="1630">mode_bits</text>
+  <text class="sig" x="1890" y="1690">shift_tx_byte_done</text>
+  <text class="sig" x="1890" y="1730">shift_rx_byte_ready</text>
+  <text class="sig" x="1890" y="1770">shift_rx_byte</text>
+  <text class="sig" x="1890" y="1810">fifo_tx_empty</text>
+  <text class="sig" x="1890" y="1850">fifo_tx_rbyte</text>
+  <text class="sig" x="1890" y="1890">fifo_rx_full</text>
+  <text class="sig" x="2610" y="790" text-anchor="end">ready</text>
+  <text class="sig" x="2610" y="830" text-anchor="end">done</text>
+  <text class="sig" x="2610" y="870" text-anchor="end">error</text>
+  <text class="red" x="2610" y="930" text-anchor="end">qspi_cs</text>
+  <text class="sig" x="2610" y="990" text-anchor="end">sclk_en</text>
+  <text class="sig" x="2610" y="1050" text-anchor="end">phase</text>
+  <text class="sig" x="2610" y="1090" text-anchor="end">current_bus_width</text>
+  <text class="sig" x="2610" y="1150" text-anchor="end">shift_tx_load</text>
+  <text class="sig" x="2610" y="1190" text-anchor="end">shift_tx_byte</text>
+  <text class="sig" x="2610" y="1230" text-anchor="end">shift_rx_en</text>
+  <text class="sig" x="2610" y="1300" text-anchor="end">fifo_tx_rd</text>
+  <text class="sig" x="2610" y="1340" text-anchor="end">fifo_rx_wr</text>
+  <text class="sig" x="2610" y="1380" text-anchor="end">fifo_rx_wbyte</text>
+
+  <rect class="block" x="1850" y="200" width="610" height="330"/>
+  <text class="title" x="2030" y="160">tx_fifo</text>
+  <text class="sig" x="1890" y="270">clk</text>
+  <text class="sig" x="1890" y="310">reset</text>
+  <text class="sig" x="1890" y="350">soft_reset</text>
+  <text class="sig" x="1890" y="390">wr</text>
+  <text class="sig" x="1890" y="430">rd</text>
+  <text class="sig" x="1890" y="470">wr_data</text>
+  <text class="sig" x="2425" y="270" text-anchor="end">rd_data</text>
+  <text class="sig" x="2425" y="310" text-anchor="end">full</text>
+  <text class="sig" x="2425" y="350" text-anchor="end">empty</text>
+
+  <rect class="block" x="1850" y="2115" width="610" height="330"/>
+  <text class="title" x="2030" y="2075">rx_fifo</text>
+  <text class="sig" x="1890" y="2185">clk</text>
+  <text class="sig" x="1890" y="2225">reset</text>
+  <text class="sig" x="1890" y="2265">soft_reset</text>
+  <text class="sig" x="1890" y="2305">wr</text>
+  <text class="sig" x="1890" y="2345">rd</text>
+  <text class="sig" x="1890" y="2385">wr_data</text>
+  <text class="sig" x="2425" y="2185" text-anchor="end">rd_data</text>
+  <text class="sig" x="2425" y="2225" text-anchor="end">full</text>
+  <text class="sig" x="2425" y="2265" text-anchor="end">empty</text>
+
+  <rect class="block" x="1810" y="2680" width="710" height="350"/>
+  <text class="title" x="1995" y="2640">qspi_sclk_gen</text>
+  <text class="sig" x="1850" y="2750">clk</text>
+  <text class="sig" x="1850" y="2790">reset</text>
+  <text class="sig" x="1850" y="2830">soft_reset</text>
+  <text class="sig" x="1850" y="2870">clk_div</text>
+  <text class="sig" x="1850" y="2910">cpol</text>
+  <text class="sig" x="1850" y="2950">cpha</text>
+  <text class="sig" x="1850" y="2990">sclk_en</text>
+  <text class="sig" x="2480" y="2750" text-anchor="end">qspi_sclk</text>
+  <text class="sig" x="2480" y="2790" text-anchor="end">drive_tick</text>
+  <text class="sig" x="2480" y="2830" text-anchor="end">sample_tick</text>
+
+  <rect class="block" x="3110" y="760" width="760" height="620"/>
+  <text class="title" x="3310" y="720">qspi_shift_reg</text>
+  <text class="sig" x="3150" y="830">clk</text>
+  <text class="sig" x="3150" y="870">reset</text>
+  <text class="sig" x="3150" y="910">soft_reset</text>
+  <text class="sig" x="3150" y="950">lsb_first</text>
+  <text class="sig" x="3150" y="990">phase</text>
+  <text class="sig" x="3150" y="1030">current_bus_width</text>
+  <text class="sig" x="3150" y="1070">shift_tx_load</text>
+  <text class="sig" x="3150" y="1110">shift_tx_byte</text>
+  <text class="sig" x="3150" y="1150">shift_rx_en</text>
+  <text class="sig" x="3150" y="1190">drive_tick</text>
+  <text class="sig" x="3150" y="1230">sample_tick</text>
+  <text class="blue" x="3150" y="1270">io_rx</text>
+  <text class="sig" x="3830" y="830" text-anchor="end">shift_tx_byte_done</text>
+  <text class="sig" x="3830" y="870" text-anchor="end">shift_rx_byte_ready</text>
+  <text class="sig" x="3830" y="910" text-anchor="end">shift_rx_byte</text>
+  <text class="blue" x="3830" y="1270" text-anchor="end">io_tx</text>
+
+  <rect class="block" x="3110" y="1740" width="760" height="340"/>
+  <text class="title" x="3325" y="1700">qspi_io_ctrl</text>
+  <text class="sig" x="3150" y="1810">phase</text>
+  <text class="sig" x="3150" y="1850">current_bus_width</text>
+  <text class="blue" x="3150" y="1890">io_tx</text>
+  <text class="blue" x="3830" y="1810" text-anchor="end">io_rx</text>
+  <text class="blue" x="3830" y="1890" text-anchor="end">qspi_io</text>
+
+  <rect class="block" x="3110" y="270" width="760" height="260"/>
+  <text class="title" x="3270" y="230">qspi_startupe2_sck</text>
+  <text class="sig" x="3150" y="370">qspi_sclk</text>
+  <text class="red" x="3830" y="370" text-anchor="end">USRCCLKO</text>
+  <text class="red" x="3830" y="420" text-anchor="end">USRCCLKTS</text>
+
+  <path class="wire" d="M 200 850 H 534 M 300 130 V 2570 M 300 130 H 1780 V 270 H 1850 M 300 640 H 3040 V 830 H 3110 M 300 690 H 1780 V 790 H 1850 M 300 2035 H 1780 V 2185 H 1850 M 300 2570 H 1760 V 2750 H 1810"/>
+  <path class="wire" d="M 200 890 H 540 M 350 115 V 2600 M 350 115 H 1790 V 310 H 1850 M 350 600 H 3060 V 870 H 3110 M 350 705 H 1770 V 830 H 1850 M 350 2020 H 1770 V 2225 H 1850 M 350 2600 H 1770 V 2790 H 1810"/>
+  <path class="wire" d="M 200 930 H 540"/>
+  <path class="wire" d="M 200 970 H 540"/>
+  <path class="wire" d="M 200 1010 H 540"/>
+  <path class="wire" d="M 200 1050 H 540"/>
+  <path class="wire" d="M 200 1090 H 540"/>
+  <path class="wire" d="M 1300 850 H 1420 V 700 H 500 V 1130 H 200"/>
+  <path class="wire" d="M 2650 930 H 2940 V 650 H 4100"/>
+  <path class="wire" d="M 3870 370 H 4100"/>
+  <path class="wire" d="M 3870 1890 H 4100"/>
+  <path class="wire" d="M 2650 790 H 2860 V 565 H 510 V 1160 H 540"/>
+  <path class="wire" d="M 2650 830 H 2880 V 590 H 490 V 1200 H 540"/>
+  <path class="wire" d="M 2650 870 H 2900 V 615 H 470 V 1240 H 540"/>
+  <path class="wire" d="M 2460 310 H 2960 V 545 H 450 V 1310 H 540"/>
+  <path class="wire" d="M 2460 2265 H 2970 V 2025 H 450 V 1350 H 540"/>
+  <path class="wire" d="M 2460 2185 H 3010 V 2005 H 420 V 1390 H 540"/>
+  <path class="wire" d="M 1300 890 H 1500 V 870 H 1850"/>
+  <path class="wire" d="M 1300 930 H 1380 V 350 H 1850 M 1380 930 H 1560 V 910 H 1850 M 1380 600 H 3060 V 910 H 3110 M 1380 930 V 2265 H 1850 M 1380 2265 V 2830 H 1810"/>
+  <path class="wire" d="M 1300 970 H 1320 V 2910 H 1810"/>
+  <path class="wire" d="M 1300 1010 H 1340 V 2950 H 1810"/>
+  <path class="wire" d="M 1300 1050 H 1420 V 1985 H 3060 V 950 H 3110"/>
+  <path class="wire" d="M 1300 1090 H 1360 V 2870 H 1810"/>
+  <path class="wire" d="M 1300 1130 H 1450 V 950 H 1850"/>
+  <path class="wire" d="M 1300 1170 H 1480 V 990 H 1850"/>
+  <path class="wire" d="M 1300 1210 H 1510 V 1030 H 1850"/>
+  <path class="wire" d="M 1300 1250 H 1540 V 1070 H 1850"/>
+  <path class="wire" d="M 1300 1290 H 1570 V 1110 H 1850"/>
+  <path class="wire" d="M 1300 1330 H 1600 V 1150 H 1850"/>
+  <path class="wire" d="M 1300 1370 H 1630 V 1190 H 1850"/>
+  <path class="wire" d="M 1300 1410 H 1660 V 1230 H 1850"/>
+  <path class="wire" d="M 1300 1450 H 1690 V 1270 H 1850"/>
+  <path class="wire" d="M 1300 1490 H 1720 V 1310 H 1850"/>
+  <path class="wire" d="M 1300 1530 H 1750 V 1350 H 1850"/>
+  <path class="wire" d="M 1300 1570 H 1780 V 1390 H 1850"/>
+  <path class="wire" d="M 1300 1610 H 1810 V 1470 H 1850"/>
+  <path class="wire" d="M 1300 1650 H 1785 V 1510 H 1850"/>
+  <path class="wire" d="M 1300 1690 H 1760 V 1550 H 1850"/>
+  <path class="wire" d="M 1300 1730 H 1735 V 1590 H 1850"/>
+  <path class="wire" d="M 1300 1770 H 1710 V 1630 H 1850"/>
+  <path class="wire" d="M 1300 1810 H 1410 V 1430 H 1850"/>
+  <path class="wire" d="M 1300 1850 H 1675 V 390 H 1850"/>
+  <path class="wire" d="M 1300 1890 H 1620 V 470 H 1850"/>
+  <path class="wire" d="M 1300 1930 H 1640 V 2345 H 1850"/>
+  <path class="wire" d="M 3870 830 H 4020 V 575 H 1800 V 1690 H 1850"/>
+  <path class="wire" d="M 3870 870 H 3990 V 605 H 1770 V 1730 H 1850"/>
+  <path class="wire" d="M 3870 910 H 3960 V 635 H 1740 V 1770 H 1850"/>
+  <path class="wire" d="M 2460 350 H 2780 V 610 H 1830 V 1810 H 1850"/>
+  <path class="wire" d="M 2460 270 H 2810 V 585 H 1680 V 1850 H 1850"/>
+  <path class="wire" d="M 2460 2225 H 2820 V 2030 H 1720 V 1890 H 1850"/>
+  <path class="wire" d="M 2650 990 H 2870 V 2590 H 1740 V 2990 H 1810"/>
+  <path class="wire" d="M 2650 1050 H 3000 M 3000 1050 V 990 H 3110 M 3000 1050 V 1810 H 3110"/>
+  <path class="wire" d="M 2650 1090 H 3030 M 3030 1090 V 1030 H 3110 M 3030 1090 V 1850 H 3110"/>
+  <path class="wire" d="M 2650 1150 H 2960 V 1070 H 3104"/>
+  <path class="wire" d="M 2650 1190 H 2910 V 1110 H 3110"/>
+  <path class="wire" d="M 2650 1230 H 2985 V 1150 H 3104"/>
+  <path class="wire" d="M 2650 1300 H 2820 V 120 H 1700 V 430 H 1844"/>
+  <path class="wire" d="M 2650 1340 H 2805 V 2485 H 1700 V 2305 H 1844"/>
+  <path class="wire" d="M 2650 1380 H 2850 V 2535 H 1680 V 2385 H 1844"/>
+  <path class="wire" d="M 2520 2750 H 3070 V 370 H 3104"/>
+  <path class="wire" d="M 2520 2790 H 2935 V 1190 H 3104"/>
+  <path class="wire" d="M 2520 2830 H 3050 V 1230 H 3104"/>
+  <path class="wire" d="M 3870 1270 H 3990 V 2140 H 3000 V 1890 H 3104"/>
+  <path class="wire" d="M 3870 1810 H 3955 V 1430 H 3045 V 1270 H 3104"/>
+  <path class="wire" d="M 3870 420 H 3940 V 460"/>
+  <path class="wire" d="M 3915 460 H 3965"/>
+  <path class="wire" d="M 3925 475 H 3955"/>
+  <path class="wire" d="M 3935 490 H 3945"/>
+
+  <circle class="dot" cx="300" cy="130" r="7"/>
+  <circle class="dot" cx="300" cy="640" r="7"/>
+  <circle class="dot" cx="300" cy="690" r="7"/>
+  <circle class="dot" cx="300" cy="850" r="7"/>
+  <circle class="dot" cx="300" cy="2035" r="7"/>
+  <circle class="dot" cx="300" cy="2570" r="7"/>
+  <circle class="dot" cx="350" cy="115" r="7"/>
+  <circle class="dot" cx="350" cy="600" r="7"/>
+  <circle class="dot" cx="350" cy="705" r="7"/>
+  <circle class="dot" cx="350" cy="890" r="7"/>
+  <circle class="dot" cx="350" cy="2020" r="7"/>
+  <circle class="dot" cx="350" cy="2600" r="7"/>
+  <circle class="dot" cx="1380" cy="930" r="7"/>
+  <circle class="dot" cx="1380" cy="600" r="7"/>
+  <circle class="dot" cx="1380" cy="2265" r="7"/>
+  <circle class="dot" cx="3000" cy="1050" r="7"/>
+  <circle class="dot" cx="3030" cy="1090" r="7"/>
+
+  <text class="sig" x="85" y="850">clk</text>
+  <text class="sig" x="85" y="890">reset</text>
+  <text class="sig" x="85" y="930">cs</text>
+  <text class="sig" x="85" y="970">read</text>
+  <text class="sig" x="85" y="1010">write</text>
+  <text class="sig" x="85" y="1050">addr</text>
+  <text class="sig" x="85" y="1090">wr_data</text>
+  <text class="sig" x="85" y="1130">rd_data</text>
+  <text class="sig" x="4215" y="650" text-anchor="end">qspi_cs</text>
+  <text class="sig" x="4215" y="370" text-anchor="end">USRCCLKO</text>
+  <text class="sig" x="4215" y="1890" text-anchor="end">qspi_io</text>
+
+</svg>
