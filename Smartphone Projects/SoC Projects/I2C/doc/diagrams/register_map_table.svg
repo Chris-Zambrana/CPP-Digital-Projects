@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .title { font: 700 34px Arial, Helvetica, sans-serif; fill: #162033; }
+      .subtitle { font: 400 16px Arial, Helvetica, sans-serif; fill: #4f5b6f; }
+      .table-outline { fill: #ffffff; stroke: #c8d0df; stroke-width: 2; }
+      .header { fill: #24324a; }
+      .header-text { font: 700 16px Arial, Helvetica, sans-serif; fill: #ffffff; }
+      .row-even { fill: #ffffff; }
+      .row-odd { fill: #f1f4f9; }
+      .cell-line { stroke: #d7deea; stroke-width: 1; }
+      .offset { font: 700 17px Consolas, "Courier New", monospace; fill: #26364f; }
+      .access { font: 700 15px Arial, Helvetica, sans-serif; fill: #31516f; }
+      .reg { font: 700 18px Arial, Helvetica, sans-serif; fill: #18243a; }
+      .field { font: 700 13px Consolas, "Courier New", monospace; fill: #162033; }
+      .field-small { font: 700 11px Consolas, "Courier New", monospace; fill: #162033; }
+      .note { font: 400 13px Arial, Helvetica, sans-serif; fill: #4f5b6f; }
+      .legend-title { font: 700 16px Arial, Helvetica, sans-serif; fill: #18243a; }
+      .reserved { fill: #e8edf5; stroke: #c8d0df; stroke-width: 1; }
+      .control { fill: #d9ecff; stroke: #7bb7e6; stroke-width: 1.2; }
+      .status { fill: #dcf7e7; stroke: #7ac79a; stroke-width: 1.2; }
+      .data { fill: #f0e3ff; stroke: #b38ae6; stroke-width: 1.2; }
+      .timing { fill: #fff7c9; stroke: #d4bd48; stroke-width: 1.2; }
+      .cmdlegend { fill: #ffe9cf; stroke: #e3a357; stroke-width: 1.2; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1280" height="720"/>
+
+  <text class="title" x="70" y="62">I2C Master Register Map</text>
+  <text class="subtitle" x="72" y="92">First-revision byte-command CSR map with TX/RX FIFOs and polling status</text>
+
+  <rect class="table-outline" x="70" y="125" width="1140" height="402" rx="10"/>
+  <rect class="header" x="70" y="125" width="1140" height="48" rx="10"/>
+  <rect class="header" x="70" y="149" width="1140" height="24"/>
+
+  <text class="header-text" x="95" y="155">Offset</text>
+  <text class="header-text" x="205" y="155">Access</text>
+  <text class="header-text" x="305" y="155">Register</text>
+  <text class="header-text" x="500" y="155">Bit Fields</text>
+
+  <line class="cell-line" x1="180" y1="125" x2="180" y2="527"/>
+  <line class="cell-line" x1="280" y1="125" x2="280" y2="527"/>
+  <line class="cell-line" x1="470" y1="125" x2="470" y2="527"/>
+
+  <rect class="row-even" x="70" y="173" width="1140" height="70"/>
+  <rect class="row-odd" x="70" y="243" width="1140" height="70"/>
+  <rect class="row-even" x="70" y="313" width="1140" height="70"/>
+  <rect class="row-odd" x="70" y="383" width="1140" height="70"/>
+  <rect class="row-even" x="70" y="453" width="1140" height="74"/>
+
+  <line class="cell-line" x1="70" y1="243" x2="1210" y2="243"/>
+  <line class="cell-line" x1="70" y1="313" x2="1210" y2="313"/>
+  <line class="cell-line" x1="70" y1="383" x2="1210" y2="383"/>
+  <line class="cell-line" x1="70" y1="453" x2="1210" y2="453"/>
+
+  <!-- 0x00 CONTROL -->
+  <text class="offset" x="95" y="215">0x00</text>
+  <text class="access" x="215" y="215">RW</text>
+  <text class="reg" x="305" y="215">CONTROL</text>
+  <rect class="control" x="500" y="191" width="126" height="28" rx="4"/><text class="field-small" x="510" y="210">[0] SOFT_RESET</text>
+  <rect class="control" x="636" y="191" width="102" height="28" rx="4"/><text class="field-small" x="652" y="210">[3:1] CMD</text>
+  <rect class="reserved" x="748" y="191" width="160" height="28" rx="4"/><text class="field-small" x="790" y="210">[31:4] RSV</text>
+
+  <!-- 0x04 STATUS -->
+  <text class="offset" x="95" y="285">0x04</text>
+  <text class="access" x="205" y="285">RO/W1C</text>
+  <text class="reg" x="305" y="285">STATUS</text>
+  <rect class="status" x="500" y="261" width="82" height="28" rx="4"/><text class="field-small" x="511" y="280">[0] READY</text>
+  <rect class="status" x="592" y="261" width="80" height="28" rx="4"/><text class="field-small" x="604" y="280">[1] DONE</text>
+  <rect class="status" x="682" y="261" width="120" height="28" rx="4"/><text class="field-small" x="694" y="280">[2] ACK_ERROR</text>
+  <rect class="status" x="812" y="261" width="94" height="28" rx="4"/><text class="field-small" x="822" y="280">[3] TX_FULL</text>
+  <rect class="status" x="916" y="261" width="108" height="28" rx="4"/><text class="field-small" x="926" y="280">[4] RX_EMPTY</text>
+  <rect class="reserved" x="1034" y="261" width="130" height="28" rx="4"/><text class="field-small" x="1058" y="280">[31:5] RSV</text>
+
+  <!-- 0x08 CLK_DIV -->
+  <text class="offset" x="95" y="355">0x08</text>
+  <text class="access" x="215" y="355">RW</text>
+  <text class="reg" x="305" y="355">CLK_DIV</text>
+  <rect class="timing" x="500" y="331" width="210" height="28" rx="4"/><text class="field" x="543" y="350">[15:0] DIVIDER</text>
+  <rect class="reserved" x="720" y="331" width="190" height="28" rx="4"/><text class="field" x="752" y="350">[31:16] RSV</text>
+
+  <!-- 0x0C TXDATA -->
+  <text class="offset" x="95" y="425">0x0C</text>
+  <text class="access" x="215" y="425">WO</text>
+  <text class="reg" x="305" y="425">TXDATA</text>
+  <rect class="data" x="500" y="401" width="150" height="28" rx="4"/><text class="field" x="522" y="420">[7:0] TX_BYTE</text>
+  <rect class="reserved" x="660" y="401" width="160" height="28" rx="4"/><text class="field-small" x="704" y="420">[31:8] RSV</text>
+
+  <!-- 0x10 RXDATA -->
+  <text class="offset" x="95" y="497">0x10</text>
+  <text class="access" x="215" y="497">RO</text>
+  <text class="reg" x="305" y="497">RXDATA</text>
+  <rect class="data" x="500" y="473" width="150" height="28" rx="4"/><text class="field" x="522" y="492">[7:0] RX_BYTE</text>
+  <rect class="reserved" x="660" y="473" width="160" height="28" rx="4"/><text class="field-small" x="704" y="492">[31:8] RSV</text>
+
+  <!-- CONTROL.CMD encoding legend -->
+  <rect class="table-outline" x="70" y="560" width="1140" height="112" rx="10"/>
+  <text class="legend-title" x="95" y="590">CONTROL.CMD Encoding</text>
+  <rect class="cmdlegend" x="95" y="610" width="120" height="28" rx="4"/><text class="field-small" x="111" y="629">000 START</text>
+  <rect class="cmdlegend" x="225" y="610" width="100" height="28" rx="4"/><text class="field-small" x="249" y="629">001 WR</text>
+  <rect class="cmdlegend" x="335" y="610" width="100" height="28" rx="4"/><text class="field-small" x="359" y="629">010 RD</text>
+  <rect class="cmdlegend" x="445" y="610" width="100" height="28" rx="4"/><text class="field-small" x="467" y="629">011 STOP</text>
+  <rect class="cmdlegend" x="555" y="610" width="128" height="28" rx="4"/><text class="field-small" x="570" y="629">100 RESTART</text>
+  <rect class="cmdlegend" x="693" y="610" width="120" height="28" rx="4"/><text class="field-small" x="710" y="629">101 RD_ACK</text>
+  <rect class="cmdlegend" x="823" y="610" width="132" height="28" rx="4"/><text class="field-small" x="837" y="629">110 RD_NACK</text>
+  <rect class="reserved" x="965" y="610" width="120" height="28" rx="4"/><text class="field-small" x="987" y="629">111 RSV</text>
+  <text class="note" x="95" y="656">RD_ACK requests another byte; RD_NACK ends a read burst. ACK_ERROR reports target NACKs observed after WR commands.</text>
+</svg>

@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="837" viewBox="0 0 4300 3000">
+  <defs>
+    <style>
+      .bg { fill: #0f1115; }
+      .outer { fill: none; stroke: #d8c2ff; stroke-width: 6; }
+      .block { fill: #171a21; stroke: #f4f0e8; stroke-width: 4; rx: 8; ry: 8; }
+      .wire { fill: none; stroke: #f4f0e8; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .title { fill: #f4f0e8; font-family: Consolas, "Courier New", monospace; font-size: 40px; }
+      .sig { fill: #7ac943; font-family: Consolas, "Courier New", monospace; font-size: 25px; }
+      .pin { fill: #7ac943; font-family: Consolas, "Courier New", monospace; font-size: 25px; }
+      .dot { fill: #f4f0e8; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="4300" height="3000"/>
+  <rect class="outer" x="260" y="80" width="3780" height="2760" rx="70"/>
+  <text class="title" x="320" y="55">top_i2c_core</text>
+
+  <rect class="block" x="540" y="700" width="760" height="760"/>
+  <text class="title" x="785" y="660">i2c_csr_map</text>
+  <text class="sig" x="580" y="770">clk</text>
+  <text class="sig" x="580" y="810">reset</text>
+  <text class="sig" x="580" y="850">cs</text>
+  <text class="sig" x="580" y="890">read</text>
+  <text class="sig" x="580" y="930">write</text>
+  <text class="sig" x="580" y="970">addr</text>
+  <text class="sig" x="580" y="1010">wr_data</text>
+  <text class="sig" x="580" y="1080">ready</text>
+  <text class="sig" x="580" y="1120">done</text>
+  <text class="sig" x="580" y="1160">ack_error</text>
+  <text class="sig" x="580" y="1230">fifo_tx_full</text>
+  <text class="sig" x="580" y="1270">fifo_rx_empty</text>
+  <text class="sig" x="580" y="1310">fifo_rx_rbyte</text>
+  <text class="sig" x="1260" y="770" text-anchor="end">rd_data</text>
+  <text class="sig" x="1260" y="830" text-anchor="end">soft_reset</text>
+  <text class="sig" x="1260" y="870" text-anchor="end">cmd_wr</text>
+  <text class="sig" x="1260" y="910" text-anchor="end">cmd</text>
+  <text class="sig" x="1260" y="950" text-anchor="end">clk_divider</text>
+  <text class="sig" x="1260" y="1030" text-anchor="end">fifo_tx_wr</text>
+  <text class="sig" x="1260" y="1070" text-anchor="end">fifo_tx_wbyte</text>
+  <text class="sig" x="1260" y="1110" text-anchor="end">fifo_rx_rd</text>
+
+  <rect class="block" x="1750" y="400" width="610" height="330"/>
+  <text class="title" x="1930" y="360">tx_fifo</text>
+  <text class="sig" x="1790" y="470">clk</text>
+  <text class="sig" x="1790" y="510">reset</text>
+  <text class="sig" x="1790" y="550">soft_reset</text>
+  <text class="sig" x="1790" y="590">wr</text>
+  <text class="sig" x="1790" y="630">rd</text>
+  <text class="sig" x="1790" y="670">wr_data</text>
+  <text class="sig" x="2325" y="470" text-anchor="end">rd_data</text>
+  <text class="sig" x="2325" y="510" text-anchor="end">full</text>
+  <text class="sig" x="2325" y="550" text-anchor="end">empty</text>
+
+  <rect class="block" x="1750" y="1120" width="800" height="760"/>
+  <text class="title" x="1955" y="1080">i2c_controller</text>
+  <text class="sig" x="1790" y="1190">clk</text>
+  <text class="sig" x="1790" y="1230">reset</text>
+  <text class="sig" x="1790" y="1270">soft_reset</text>
+  <text class="sig" x="1790" y="1330">cmd_wr</text>
+  <text class="sig" x="1790" y="1370">cmd</text>
+  <text class="sig" x="1790" y="1450">fifo_tx_empty</text>
+  <text class="sig" x="1790" y="1490">fifo_tx_rdata</text>
+  <text class="sig" x="1790" y="1550">fifo_rx_full</text>
+  <text class="sig" x="1790" y="1630">engine_ready</text>
+  <text class="sig" x="1790" y="1670">engine_done</text>
+  <text class="sig" x="1790" y="1710">engine_ack_error</text>
+  <text class="sig" x="1790" y="1750">engine_rx_byte</text>
+  <text class="sig" x="2510" y="1190" text-anchor="end">ready</text>
+  <text class="sig" x="2510" y="1230" text-anchor="end">done</text>
+  <text class="sig" x="2510" y="1270" text-anchor="end">ack_error</text>
+  <text class="sig" x="2510" y="1350" text-anchor="end">fifo_tx_rd</text>
+  <text class="sig" x="2510" y="1430" text-anchor="end">fifo_rx_wr</text>
+  <text class="sig" x="2510" y="1470" text-anchor="end">fifo_rx_wdata</text>
+  <text class="sig" x="2510" y="1550" text-anchor="end">engine_start</text>
+  <text class="sig" x="2510" y="1590" text-anchor="end">engine_cmd</text>
+  <text class="sig" x="2510" y="1630" text-anchor="end">engine_tx_byte</text>
+  <text class="sig" x="2510" y="1670" text-anchor="end">engine_ack_value</text>
+
+  <rect class="block" x="1750" y="2200" width="610" height="330"/>
+  <text class="title" x="1930" y="2160">rx_fifo</text>
+  <text class="sig" x="1790" y="2270">clk</text>
+  <text class="sig" x="1790" y="2310">reset</text>
+  <text class="sig" x="1790" y="2350">soft_reset</text>
+  <text class="sig" x="1790" y="2390">wr</text>
+  <text class="sig" x="1790" y="2430">rd</text>
+  <text class="sig" x="1790" y="2470">wr_data</text>
+  <text class="sig" x="2325" y="2270" text-anchor="end">rd_data</text>
+  <text class="sig" x="2325" y="2310" text-anchor="end">full</text>
+  <text class="sig" x="2325" y="2350" text-anchor="end">empty</text>
+
+  <rect class="block" x="2980" y="650" width="820" height="760"/>
+  <text class="title" x="3185" y="610">i2c_byte_engine</text>
+  <text class="sig" x="3020" y="720">clk</text>
+  <text class="sig" x="3020" y="760">reset</text>
+  <text class="sig" x="3020" y="800">soft_reset</text>
+  <text class="sig" x="3020" y="840">start</text>
+  <text class="sig" x="3020" y="880">cmd</text>
+  <text class="sig" x="3020" y="920">tx_byte</text>
+  <text class="sig" x="3020" y="960">ack_value</text>
+  <text class="sig" x="3020" y="1040">clk_divider</text>
+  <text class="sig" x="3020" y="1120">sda_rx</text>
+  <text class="sig" x="3760" y="720" text-anchor="end">ready</text>
+  <text class="sig" x="3760" y="760" text-anchor="end">done</text>
+  <text class="sig" x="3760" y="800" text-anchor="end">ack_error</text>
+  <text class="sig" x="3760" y="840" text-anchor="end">rx_byte</text>
+  <text class="sig" x="3760" y="940" text-anchor="end">scl_tx_en</text>
+  <text class="sig" x="3760" y="980" text-anchor="end">sda_tx_en</text>
+
+  <rect class="block" x="2980" y="1800" width="820" height="420"/>
+  <text class="title" x="3165" y="1760">i2c_open_drain_io</text>
+  <text class="sig" x="3020" y="1870">clk</text>
+  <text class="sig" x="3020" y="1910">reset</text>
+  <text class="sig" x="3020" y="1950">soft_reset</text>
+  <text class="sig" x="3020" y="1990">scl_tx_en</text>
+  <text class="sig" x="3020" y="2030">sda_tx_en</text>
+  <text class="sig" x="3760" y="1870" text-anchor="end">sda_rx</text>
+  <text class="pin" x="3760" y="1990" text-anchor="end">i2c_scl</text>
+  <text class="pin" x="3760" y="2030" text-anchor="end">i2c_sda</text>
+
+  <path class="wire" d="M 200 770 H 540 M 300 770 V 260 H 1680 V 2262 M 1680 462 H 1750 M 1680 1182 H 1750 M 1680 2262 H 1750 M 1680 260 H 2820 V 1862 M 2820 712 H 2980 M 2820 1862 H 2980"/>
+  <path class="wire" d="M 200 810 H 540 M 350 810 V 300 H 1640 V 2302 M 1640 502 H 1750 M 1640 1222 H 1750 M 1640 2302 H 1750 M 1640 300 H 2780 V 1902 M 2780 752 H 2980 M 2780 1902 H 2980"/>
+  <path class="wire" d="M 200 850 H 540"/>
+  <path class="wire" d="M 200 890 H 540"/>
+  <path class="wire" d="M 200 930 H 540"/>
+  <path class="wire" d="M 200 970 H 540"/>
+  <path class="wire" d="M 200 1010 H 540"/>
+  <path class="wire" d="M 1300 770 H 1480 V 560 H 480 V 1050 H 200"/>
+  <path class="wire" d="M 3800 1990 H 4100"/>
+  <path class="wire" d="M 3800 2030 H 4100"/>
+  <path class="wire" d="M 2550 1182 H 2700 V 200 H 500 V 1072 H 540"/>
+  <path class="wire" d="M 2550 1222 H 2660 V 220 H 465 V 1112 H 540"/>
+  <path class="wire" d="M 2550 1262 H 2620 V 240 H 430 V 1152 H 540"/>
+  <path class="wire" d="M 2360 502 H 2580 V 180 H 455 V 1222 H 540"/>
+  <path class="wire" d="M 2360 2342 H 2680 V 2620 H 420 V 1262 H 540"/>
+  <path class="wire" d="M 2360 2262 H 2640 V 2580 H 500 V 1302 H 540"/>
+  <path class="wire" d="M 1400 542 V 2342 M 1300 822 H 1400 M 1400 542 H 1750 M 1400 792 H 2980 M 1400 1262 H 1750 M 1400 1942 H 2980 M 1400 2342 H 1750"/>
+  <path class="wire" d="M 1300 862 H 1510 V 1322 H 1750"/>
+  <path class="wire" d="M 1300 902 H 1540 V 1362 H 1750"/>
+  <path class="wire" d="M 1300 942 H 2860 V 1032 H 2980"/>
+  <path class="wire" d="M 1300 1022 H 1460 V 582 H 1750"/>
+  <path class="wire" d="M 1300 1062 H 1500 V 662 H 1750"/>
+  <path class="wire" d="M 1300 1102 H 1580 V 2422 H 1750"/>
+  <path class="wire" d="M 2550 1342 H 2720 V 760 H 1720 V 622 H 1750"/>
+  <path class="wire" d="M 2360 462 H 2760 V 780 H 1720 V 1482 H 1750"/>
+  <path class="wire" d="M 2360 542 H 2800 V 800 H 1710 V 1442 H 1750"/>
+  <path class="wire" d="M 2550 1422 H 2720 V 2050 H 1710 V 2382 H 1750"/>
+  <path class="wire" d="M 2550 1462 H 2760 V 2080 H 1720 V 2462 H 1750"/>
+  <path class="wire" d="M 2360 2302 H 2700 V 2120 H 1730 V 1542 H 1750"/>
+  <path class="wire" d="M 2550 1542 H 2880 V 832 H 2980"/>
+  <path class="wire" d="M 2550 1582 H 2910 V 872 H 2980"/>
+  <path class="wire" d="M 2550 1622 H 2940 V 912 H 2980"/>
+  <path class="wire" d="M 2550 1662 H 2970 V 952 H 2980"/>
+  <path class="wire" d="M 3800 712 H 3880 V 2600 H 1600 V 1622 H 1750"/>
+  <path class="wire" d="M 3800 752 H 3920 V 2640 H 1560 V 1662 H 1750"/>
+  <path class="wire" d="M 3800 792 H 3960 V 2680 H 1520 V 1702 H 1750"/>
+  <path class="wire" d="M 3800 832 H 4000 V 2720 H 1480 V 1742 H 1750"/>
+  <path class="wire" d="M 3800 932 H 3840 V 2240 H 2940 V 1982 H 2980"/>
+  <path class="wire" d="M 3800 972 H 3860 V 2280 H 2910 V 2022 H 2980"/>
+  <path class="wire" d="M 3800 1862 H 4020 V 2760 H 2860 V 1112 H 2980"/>
+
+  <circle class="dot" cx="300" cy="770" r="7"/>
+  <circle class="dot" cx="1680" cy="260" r="7"/>
+  <circle class="dot" cx="1680" cy="462" r="7"/>
+  <circle class="dot" cx="1680" cy="1182" r="7"/>
+  <circle class="dot" cx="1680" cy="2262" r="7"/>
+  <circle class="dot" cx="2820" cy="260" r="7"/>
+  <circle class="dot" cx="2820" cy="712" r="7"/>
+  <circle class="dot" cx="2820" cy="1862" r="7"/>
+  <circle class="dot" cx="350" cy="810" r="7"/>
+  <circle class="dot" cx="1640" cy="300" r="7"/>
+  <circle class="dot" cx="1640" cy="502" r="7"/>
+  <circle class="dot" cx="1640" cy="1222" r="7"/>
+  <circle class="dot" cx="1640" cy="2302" r="7"/>
+  <circle class="dot" cx="2780" cy="300" r="7"/>
+  <circle class="dot" cx="2780" cy="752" r="7"/>
+  <circle class="dot" cx="2780" cy="1902" r="7"/>
+  <circle class="dot" cx="1400" cy="822" r="7"/>
+  <circle class="dot" cx="1400" cy="542" r="7"/>
+  <circle class="dot" cx="1400" cy="792" r="7"/>
+  <circle class="dot" cx="1400" cy="1262" r="7"/>
+  <circle class="dot" cx="1400" cy="1942" r="7"/>
+  <circle class="dot" cx="1400" cy="2342" r="7"/>
+
+  <text class="sig" x="85" y="770">clk</text>
+  <text class="sig" x="85" y="810">reset</text>
+  <text class="sig" x="85" y="850">cs</text>
+  <text class="sig" x="85" y="890">read</text>
+  <text class="sig" x="85" y="930">write</text>
+  <text class="sig" x="85" y="970">addr</text>
+  <text class="sig" x="85" y="1010">wr_data</text>
+  <text class="sig" x="85" y="1050">rd_data</text>
+  <text class="pin" x="4215" y="1990" text-anchor="end">i2c_scl</text>
+  <text class="pin" x="4215" y="2030" text-anchor="end">i2c_sda</text>
+</svg>
