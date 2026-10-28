@@ -1,9 +1,0 @@
-verilog xil_defaultlib  \
-"../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_6/sim/bd_3914_lmb_bram_I_0.v" \
-"../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/sim/bd_3914.v" \
-"../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/sim/cpu.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-# Do not sort compile order
-nosort

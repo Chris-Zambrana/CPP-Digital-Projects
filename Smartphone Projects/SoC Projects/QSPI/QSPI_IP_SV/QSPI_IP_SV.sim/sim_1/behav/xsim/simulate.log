@@ -1,3 +1,0 @@
-Time resolution is 1 ps
-tb_top_qspi_core: PASS - complete MMIO-to-QSPI transaction verified
-$finish called at time : 16086 ns : File "C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sim_1/new/tb_top_qspi_core.sv" Line 836
