@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_qspi_csr_map_behav/xsimk.exe -simmode gui -wdb tb_qspi_csr_map_behav.wdb -simrunnum 0 -socket 52610
+Design successfully loaded
+Design Loading Memory Usage: 10532 KB (Peak: 10532 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 12484 KB (Peak: 12484 KB)
+Simulation CPU Usage: 62 ms

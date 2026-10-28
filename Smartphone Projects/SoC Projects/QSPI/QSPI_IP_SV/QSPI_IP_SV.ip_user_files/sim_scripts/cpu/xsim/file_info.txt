@@ -1,0 +1,11 @@
+bd_3914_microblaze_I_0.vhd,vhdl,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/sim/bd_3914_microblaze_I_0.vhd,
+bd_3914_rst_0_0.vhd,vhdl,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/sim/bd_3914_rst_0_0.vhd,
+bd_3914_ilmb_0.vhd,vhdl,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/sim/bd_3914_ilmb_0.vhd,
+bd_3914_dlmb_0.vhd,vhdl,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_3/sim/bd_3914_dlmb_0.vhd,
+bd_3914_dlmb_cntlr_0.vhd,vhdl,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/sim/bd_3914_dlmb_cntlr_0.vhd,
+bd_3914_ilmb_cntlr_0.vhd,vhdl,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_5/sim/bd_3914_ilmb_cntlr_0.vhd,
+bd_3914_lmb_bram_I_0.v,verilog,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_6/sim/bd_3914_lmb_bram_I_0.v,
+bd_3914_iomodule_0_0.vhd,vhdl,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/sim/bd_3914_iomodule_0_0.vhd,
+bd_3914.v,verilog,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/sim/bd_3914.v,
+cpu.v,verilog,xil_defaultlib,../../../../QSPI_IP_SV.gen/sources_1/ip/cpu/sim/cpu.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

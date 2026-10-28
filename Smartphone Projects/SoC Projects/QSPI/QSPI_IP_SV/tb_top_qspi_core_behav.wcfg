@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_qspi_core_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="qspi_types_pkg" />
+            <top_module name="tb_top_qspi_core" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="13,046.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="15,516.001 ns"></ZoomEndTime>
+      <Cursor1Time time="14,965.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="299"></NameColumnWidth>
+      <ValueColumnWidth column_width="230"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="27" />
+   <wave_markers>
+      <marker time="125000" label="" />
+      <marker time="2205000" label="" />
+      <marker time="2295000" label="" />
+      <marker time="5215000" label="" />
+      <marker time="5295000" label="" />
+      <marker time="8215000" label="" />
+      <marker time="8315000" label="" />
+      <marker time="10335000" label="" />
+      <marker time="10435000" label="" />
+      <marker time="11735000" label="" />
+      <marker time="11855000" label="" />
+      <marker time="13665000" label="" />
+      <marker time="13765000" label="" />
+      <marker time="15075000" label="" />
+      <marker time="14965000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/tb_top_qspi_core/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/cs" type="logic">
+      <obj_property name="ElementShortName">cs</obj_property>
+      <obj_property name="ObjectShortName">cs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/read" type="logic">
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/write" type="logic">
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/addr" type="array">
+      <obj_property name="ElementShortName">addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/wr_data" type="array">
+      <obj_property name="ElementShortName">wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/rd_data" type="array">
+      <obj_property name="ElementShortName">rd_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/qspi_cs" type="array">
+      <obj_property name="ElementShortName">qspi_cs[2:0]</obj_property>
+      <obj_property name="ObjectShortName">qspi_cs[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/qspi_io" type="array">
+      <obj_property name="ElementShortName">qspi_io[3:0]</obj_property>
+      <obj_property name="ObjectShortName">qspi_io[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/flash_io_out" type="array">
+      <obj_property name="ElementShortName">flash_io_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">flash_io_out[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/master_controller/byte_cnt_reg" type="array">
+      <obj_property name="ElementShortName">byte_cnt_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_cnt_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/shift_reg/rx_reg" type="array">
+      <obj_property name="ElementShortName">rx_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/clk_gen/qspi_sclk" type="logic">
+      <obj_property name="ElementShortName">qspi_sclk</obj_property>
+      <obj_property name="ObjectShortName">qspi_sclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/clk_gen/edge_tick" type="logic">
+      <obj_property name="ElementShortName">edge_tick</obj_property>
+      <obj_property name="ObjectShortName">edge_tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/master_controller/fifo_rx_wr" type="logic">
+      <obj_property name="ElementShortName">fifo_rx_wr</obj_property>
+      <obj_property name="ObjectShortName">fifo_rx_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/master_controller/fifo_rx_wbyte" type="array">
+      <obj_property name="ElementShortName">fifo_rx_wbyte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_rx_wbyte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/rx_fifo/u_fwft_fifo_reg_file/fifo_mem" type="array">
+      <obj_property name="ElementShortName">fifo_mem[0:255][7:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_mem[0:255][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/master_controller/phase" type="array">
+      <obj_property name="ElementShortName">phase[3:0]</obj_property>
+      <obj_property name="ObjectShortName">phase[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/master_controller/state_reg" type="array">
+      <obj_property name="ElementShortName">state_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_reg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/dut/shift_reg/state_reg" type="array">
+      <obj_property name="ElementShortName">state_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_qspi_core/failures" type="array">
+      <obj_property name="ElementShortName">failures[31:0]</obj_property>
+      <obj_property name="ObjectShortName">failures[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group165" type="group">
+      <obj_property name="label">SIM TX LOGIC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_top_qspi_core/tx_capture_bits" type="array">
+         <obj_property name="ElementShortName">tx_capture_bits[31:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_capture_bits[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/tx_capture_count" type="array">
+         <obj_property name="ElementShortName">tx_capture_count[31:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_capture_count[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/tx_capture_shift" type="array">
+         <obj_property name="ElementShortName">tx_capture_shift[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_capture_shift[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/tx_capture" type="array">
+         <obj_property name="ElementShortName">tx_capture[0:63][7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_capture[0:63][7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group362" type="group">
+      <obj_property name="label">SIM SEEN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_top_qspi_core/active_seen" type="logic">
+         <obj_property name="ElementShortName">active_seen</obj_property>
+         <obj_property name="ObjectShortName">active_seen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/instruction_seen" type="logic">
+         <obj_property name="ElementShortName">instruction_seen</obj_property>
+         <obj_property name="ObjectShortName">instruction_seen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/address_seen" type="logic">
+         <obj_property name="ElementShortName">address_seen</obj_property>
+         <obj_property name="ObjectShortName">address_seen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/mode_seen" type="logic">
+         <obj_property name="ElementShortName">mode_seen</obj_property>
+         <obj_property name="ObjectShortName">mode_seen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/dummy_seen" type="logic">
+         <obj_property name="ElementShortName">dummy_seen</obj_property>
+         <obj_property name="ObjectShortName">dummy_seen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/tx_data_seen" type="logic">
+         <obj_property name="ElementShortName">tx_data_seen</obj_property>
+         <obj_property name="ObjectShortName">tx_data_seen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/rx_data_seen" type="logic">
+         <obj_property name="ElementShortName">rx_data_seen</obj_property>
+         <obj_property name="ObjectShortName">rx_data_seen</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group320" type="group">
+      <obj_property name="label">SIM EXPECT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_top_qspi_core/expected_cs_num" type="array">
+         <obj_property name="ElementShortName">expected_cs_num[1:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_cs_num[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/expected_cmd_io_width" type="array">
+         <obj_property name="ElementShortName">expected_cmd_io_width[2:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_cmd_io_width[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/expected_addr_io_width" type="array">
+         <obj_property name="ElementShortName">expected_addr_io_width[2:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_addr_io_width[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/expected_mode_io_width" type="array">
+         <obj_property name="ElementShortName">expected_mode_io_width[2:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_mode_io_width[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/expected_data_io_width" type="array">
+         <obj_property name="ElementShortName">expected_data_io_width[2:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_data_io_width[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group166" type="group">
+      <obj_property name="label">SIM RX LOGIC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_top_qspi_core/flash_response_group" type="array">
+         <obj_property name="ElementShortName">flash_response_group[31:0]</obj_property>
+         <obj_property name="ObjectShortName">flash_response_group[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/flash_response_width" type="array">
+         <obj_property name="ElementShortName">flash_response_width[2:0]</obj_property>
+         <obj_property name="ObjectShortName">flash_response_width[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/flash_response_count" type="array">
+         <obj_property name="ElementShortName">flash_response_count[31:0]</obj_property>
+         <obj_property name="ObjectShortName">flash_response_count[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/flash_response" type="array">
+         <obj_property name="ElementShortName">flash_response[0:15][7:0]</obj_property>
+         <obj_property name="ObjectShortName">flash_response[0:15][7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group164" type="group">
+      <obj_property name="label">SIM MACROS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_top_qspi_core/CLK_PERIOD" type="array">
+         <obj_property name="ElementShortName">CLK_PERIOD[63:0]</obj_property>
+         <obj_property name="ObjectShortName">CLK_PERIOD[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/PULSE_REG" type="array">
+         <obj_property name="ElementShortName">PULSE_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">PULSE_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/CONTROL_REG" type="array">
+         <obj_property name="ElementShortName">CONTROL_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">CONTROL_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/STATUS_REG" type="array">
+         <obj_property name="ElementShortName">STATUS_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">STATUS_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/DIVIDER_REG" type="array">
+         <obj_property name="ElementShortName">DIVIDER_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">DIVIDER_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/CMD_CONF_REG" type="array">
+         <obj_property name="ElementShortName">CMD_CONF_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">CMD_CONF_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/CMD_DATA_REG" type="array">
+         <obj_property name="ElementShortName">CMD_DATA_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">CMD_DATA_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/FADDR_REG" type="array">
+         <obj_property name="ElementShortName">FADDR_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">FADDR_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/TX_LEN_REG" type="array">
+         <obj_property name="ElementShortName">TX_LEN_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">TX_LEN_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/RX_LEN_REG" type="array">
+         <obj_property name="ElementShortName">RX_LEN_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">RX_LEN_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/TX_DATA_REG" type="array">
+         <obj_property name="ElementShortName">TX_DATA_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">TX_DATA_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/RX_DATA_REG" type="array">
+         <obj_property name="ElementShortName">RX_DATA_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">RX_DATA_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/CS_REG" type="array">
+         <obj_property name="ElementShortName">CS_REG[4:0]</obj_property>
+         <obj_property name="ObjectShortName">CS_REG[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/MAX_FLASH_RESPONSE_BYTES" type="array">
+         <obj_property name="ElementShortName">MAX_FLASH_RESPONSE_BYTES[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MAX_FLASH_RESPONSE_BYTES[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top_qspi_core/MAX_CAPTURE_BYTES" type="array">
+         <obj_property name="ElementShortName">MAX_CAPTURE_BYTES[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MAX_CAPTURE_BYTES[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

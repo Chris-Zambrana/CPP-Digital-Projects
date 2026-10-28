@@ -1,0 +1,1609 @@
+
+*** Running vivado
+    with args -log top_qspi_sys_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_qspi_sys_test.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_qspi_sys_test.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 490.957 ; gain = 196.078
+Command: read_checkpoint -auto_incremental -incremental C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/utils_1/imports/synth_1/top_qspi_core.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/utils_1/imports/synth_1/top_qspi_core.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_qspi_sys_test -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7380
+INFO: [Synth 8-11241] undeclared symbol 'rx_done_tick', assumed default net type 'wire' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart.sv:31]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1342.738 ; gain = 411.695
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_qspi_sys_test' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/top_qspi_sys_test.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/synth/cpu.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_3914' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:10]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_dlmb_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_3/synth/bd_3914_dlmb_0.vhd:89]
+	Parameter C_LMB_NUM_SLAVES bound to: 2 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_v10' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:92' bound to instance 'U0' of component 'lmb_v10' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_3/synth/bd_3914_dlmb_0.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:141]
+INFO: [Synth 8-3491] module 'FDS' declared at 'C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:39271' bound to instance 'POR_FF_I' of component 'FDS' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:171]
+INFO: [Synth 8-6157] synthesizing module 'FDS' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:39271]
+INFO: [Synth 8-6155] done synthesizing module 'FDS' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:39271]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_dlmb_0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_3/synth/bd_3914_dlmb_0.vhd:89]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'bd_3914_dlmb_0' is unconnected for instance 'dlmb' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:116]
+WARNING: [Synth 8-7023] instance 'dlmb' of module 'bd_3914_dlmb_0' has 25 connections declared, but only 24 given [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:116]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_dlmb_cntlr_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/synth/bd_3914_dlmb_cntlr_0.vhd:84]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000011111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK4 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK5 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK6 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK7 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_ARBITRATION bound to: 0 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:5050' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/synth/bd_3914_dlmb_cntlr_0.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:5232]
+	Parameter C_TARGET bound to: 2 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK4 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK5 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK6 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK7 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_ARBITRATION bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_mux' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4155' bound to instance 'lmb_mux_I' of component 'lmb_mux' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:5558]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4300]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3476' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4413]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr_v4_0_22_pselect_mask' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3491]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr_v4_0_22_pselect_mask' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3491]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4300]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:5232]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_dlmb_cntlr_0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/synth/bd_3914_dlmb_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_ilmb_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/synth/bd_3914_ilmb_0.vhd:89]
+	Parameter C_LMB_NUM_SLAVES bound to: 1 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_v10' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:92' bound to instance 'U0' of component 'lmb_v10' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/synth/bd_3914_ilmb_0.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10__parameterized1' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:141]
+INFO: [Synth 8-3491] module 'FDS' declared at 'C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:39271' bound to instance 'POR_FF_I' of component 'FDS' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:171]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10__parameterized1' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_ilmb_0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_2/synth/bd_3914_ilmb_0.vhd:89]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'bd_3914_ilmb_0' is unconnected for instance 'ilmb' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:164]
+WARNING: [Synth 8-7023] instance 'ilmb' of module 'bd_3914_ilmb_0' has 25 connections declared, but only 24 given [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:164]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_ilmb_cntlr_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_5/synth/bd_3914_ilmb_cntlr_0.vhd:84]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000011111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK4 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK5 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK6 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK7 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_ARBITRATION bound to: 0 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:5050' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_5/synth/bd_3914_ilmb_cntlr_0.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr__parameterized1' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:5232]
+	Parameter C_TARGET bound to: 2 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK4 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK5 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK6 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK7 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC_WIDTH bound to: 7 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_ARBITRATION bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_mux' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4155' bound to instance 'lmb_mux_I' of component 'lmb_mux' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:5558]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux__parameterized1' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4300]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3476' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4413]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr_v4_0_22_pselect_mask__parameterized0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3491]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr_v4_0_22_pselect_mask__parameterized0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3491]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux__parameterized1' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4300]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr__parameterized1' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:5232]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_ilmb_cntlr_0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_5/synth/bd_3914_ilmb_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_iomodule_0_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/synth/bd_3914_iomodule_0_0.vhd:85]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_INSTANCE bound to: iomodule - type: string 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000010000000000000001111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_IO_HIGHADDR bound to: 64'b0000000000000000000000000000000011111111111111111111111111111111 
+	Parameter C_IO_BASEADDR bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_IO_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_USE_IO_BUS bound to: 1 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_RX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_TX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_USE_FIT1 bound to: 0 - type: integer 
+	Parameter C_FIT1_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT2 bound to: 0 - type: integer 
+	Parameter C_FIT2_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT3 bound to: 0 - type: integer 
+	Parameter C_FIT3_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT4 bound to: 0 - type: integer 
+	Parameter C_FIT4_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT1 bound to: 0 - type: integer 
+	Parameter C_PIT1_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT1_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT1_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT2 bound to: 0 - type: integer 
+	Parameter C_PIT2_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT2_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT2_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT3 bound to: 0 - type: integer 
+	Parameter C_PIT3_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT3_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT3_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT4 bound to: 0 - type: integer 
+	Parameter C_PIT4_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT4_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT4_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPO1 bound to: 0 - type: integer 
+	Parameter C_GPO1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO1_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO2 bound to: 0 - type: integer 
+	Parameter C_GPO2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO2_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO3 bound to: 0 - type: integer 
+	Parameter C_GPO3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO3_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO4 bound to: 0 - type: integer 
+	Parameter C_GPO4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO4_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPI1 bound to: 0 - type: integer 
+	Parameter C_GPI1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI2 bound to: 0 - type: integer 
+	Parameter C_GPI2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI3 bound to: 0 - type: integer 
+	Parameter C_GPI3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI4 bound to: 0 - type: integer 
+	Parameter C_GPI4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_INTC_USE_EXT_INTR bound to: 0 - type: integer 
+	Parameter C_INTC_INTR_SIZE bound to: 1 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 16'b0000000000000000 
+	Parameter C_INTC_POSITIVE bound to: 16'b1111111111111111 
+	Parameter C_INTC_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_INTC_ASYNC_INTR bound to: 16'b1111111111111111 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'iomodule' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9894' bound to instance 'U0' of component 'iomodule' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/synth/bd_3914_iomodule_0_0.vhd:296]
+INFO: [Synth 8-638] synthesizing module 'iomodule' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10105]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9726' bound to instance 'pselect_mask_reg' of component 'pselect_mask' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10457]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_8_pselect_mask' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9741]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_8_pselect_mask' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9741]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9726' bound to instance 'pselect_mask_io' of component 'pselect_mask' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10502]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_8_pselect_mask__parameterized0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9741]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_8_pselect_mask__parameterized0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9741]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_RX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_TX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_USE_FIT1 bound to: 0 - type: integer 
+	Parameter C_FIT1_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT2 bound to: 0 - type: integer 
+	Parameter C_FIT2_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT3 bound to: 0 - type: integer 
+	Parameter C_FIT3_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT4 bound to: 0 - type: integer 
+	Parameter C_FIT4_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT1 bound to: 0 - type: integer 
+	Parameter C_PIT1_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT1_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT1_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT2 bound to: 0 - type: integer 
+	Parameter C_PIT2_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT2_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT2_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT3 bound to: 0 - type: integer 
+	Parameter C_PIT3_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT3_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT3_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT4 bound to: 0 - type: integer 
+	Parameter C_PIT4_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT4_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT4_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPO1 bound to: 0 - type: integer 
+	Parameter C_GPO1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO1_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO2 bound to: 0 - type: integer 
+	Parameter C_GPO2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO2_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO3 bound to: 0 - type: integer 
+	Parameter C_GPO3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO3_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO4 bound to: 0 - type: integer 
+	Parameter C_GPO4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO4_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPI1 bound to: 0 - type: integer 
+	Parameter C_GPI1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI2 bound to: 0 - type: integer 
+	Parameter C_GPI2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI3 bound to: 0 - type: integer 
+	Parameter C_GPI3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI4 bound to: 0 - type: integer 
+	Parameter C_GPI4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_USE_EXT_INTR bound to: 0 - type: integer 
+	Parameter C_INTC_INTR_SIZE bound to: 1 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 16'b0000000000000000 
+	Parameter C_INTC_POSITIVE bound to: 16'b1111111111111111 
+	Parameter C_INTC_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_INTC_ASYNC_INTR bound to: 16'b1111111111111111 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'Iomodule_core' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8513' bound to instance 'IOModule_Core_I1' of component 'iomodule_core' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10693]
+INFO: [Synth 8-638] synthesizing module 'Iomodule_core' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8727]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 199 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'UART' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7690' bound to instance 'UART_I1' of component 'UART' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9053]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_8_UART' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7741]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 136 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'UART_Core' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7143' bound to instance 'UART_Core_I' of component 'UART_Core' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7860]
+INFO: [Synth 8-638] synthesizing module 'UART_Core' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7187]
+INFO: [Synth 8-256] done synthesizing module 'UART_Core' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7187]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_8_UART' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7741]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2500' bound to instance 'FIT_I1' of component 'FIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9106]
+INFO: [Synth 8-638] synthesizing module 'FIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2528]
+INFO: [Synth 8-256] done synthesizing module 'FIT_Module' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2528]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2500' bound to instance 'FIT_I2' of component 'FIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9129]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2500' bound to instance 'FIT_I3' of component 'FIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9152]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2500' bound to instance 'FIT_I4' of component 'FIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9175]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4278' bound to instance 'PIT_I1' of component 'PIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9213]
+INFO: [Synth 8-638] synthesizing module 'PIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4309]
+INFO: [Synth 8-256] done synthesizing module 'PIT_Module' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4309]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4278' bound to instance 'PIT_I2' of component 'PIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9252]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4278' bound to instance 'PIT_I3' of component 'PIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9291]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4278' bound to instance 'PIT_I4' of component 'PIT_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9330]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 32'b00000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3189' bound to instance 'GPO_I1' of component 'GPO_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9358]
+INFO: [Synth 8-638] synthesizing module 'GPO_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3213]
+INFO: [Synth 8-256] done synthesizing module 'GPO_Module' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3213]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 32'b00000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3189' bound to instance 'GPO_I2' of component 'GPO_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9377]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 32'b00000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3189' bound to instance 'GPO_I3' of component 'GPO_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9396]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 32'b00000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3189' bound to instance 'GPO_I4' of component 'GPO_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9415]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3017' bound to instance 'GPI_I1' of component 'GPI_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9437]
+INFO: [Synth 8-638] synthesizing module 'GPI_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3033]
+INFO: [Synth 8-256] done synthesizing module 'GPI_Module' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3033]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3017' bound to instance 'GPI_I2' of component 'GPI_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9453]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3017' bound to instance 'GPI_I3' of component 'GPI_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9469]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3017' bound to instance 'GPI_I4' of component 'GPI_Module' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9485]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 170 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_ENABLED bound to: 0 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 32'b00000000000000001111111111111111 
+	Parameter C_INTC_POSITIVE bound to: 32'b11111111111111111111111111111111 
+	Parameter C_INTC_ASYNC_INTR bound to: 32'b11111111111111110000000000000000 
+	Parameter C_INTC_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_USE_LUTRAM bound to: yes - type: string 
+INFO: [Synth 8-3491] module 'intr_ctrl' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3369' bound to instance 'intr_ctrl_I1' of component 'intr_ctrl' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9527]
+INFO: [Synth 8-638] synthesizing module 'intr_ctrl' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3415]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_8_MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1035]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1064]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_8_MB_FDR' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1035]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1019' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4174]
+INFO: [Synth 8-256] done synthesizing module 'intr_ctrl' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3415]
+INFO: [Synth 8-256] done synthesizing module 'Iomodule_core' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8727]
+INFO: [Synth 8-256] done synthesizing module 'iomodule' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10105]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_iomodule_0_0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/synth/bd_3914_iomodule_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_lmb_bram_I_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_6/synth/bd_3914_lmb_bram_I_0.vhd:80]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 1 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: bd_3914_lmb_bram_I_0.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 32768 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 32768 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_RSTB bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 32768 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 32768 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 32 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     20.388 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_6' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_6/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_6' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_6/synth/bd_3914_lmb_bram_I_0.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_lmb_bram_I_0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_6/synth/bd_3914_lmb_bram_I_0.vhd:80]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'bd_3914_lmb_bram_I_0' is unconnected for instance 'lmb_bram_I' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:232]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'bd_3914_lmb_bram_I_0' is unconnected for instance 'lmb_bram_I' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:232]
+WARNING: [Synth 8-7023] instance 'lmb_bram_I' of module 'bd_3914_lmb_bram_I_0' has 16 connections declared, but only 14 given [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:232]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_microblaze_I_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/synth/bd_3914_microblaze_I_0.vhd:88]
+	Parameter C_SCO bound to: 0 - type: integer 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK bound to: 2 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK_IRQ bound to: 1 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK_DEBUG bound to: 2 - type: integer 
+	Parameter C_NUM_SYNC_FF_DBG_CLK bound to: 1 - type: integer 
+	Parameter C_NUM_SYNC_FF_DBG_TRACE_CLK bound to: 2 - type: integer 
+	Parameter C_FAULT_TOLERANT bound to: 0 - type: integer 
+	Parameter C_ECC_USE_CE_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_LOCKSTEP_SLAVE bound to: 0 - type: integer 
+	Parameter C_LOCKSTEP_MASTER bound to: 0 - type: integer 
+	Parameter C_TEMPORAL_DEPTH bound to: 0 - type: integer 
+	Parameter C_ENDIANNESS bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_PART bound to: xc7a100tcsg324-1 - type: string 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_LMB_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_INSTR_SIZE bound to: 32 - type: integer 
+	Parameter C_IADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_PIADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_DADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_INSTANCE bound to: bd_3914_microblaze_I_0 - type: string 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_AREA_OPTIMIZED bound to: 1 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_DP_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DP_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DP_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DP_EXCLUSIVE_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_D_BUS_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_M_AXI_IP_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IP_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IP_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_I_BUS_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_D_LMB bound to: 1 - type: integer 
+	Parameter C_D_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_D_AXI bound to: 0 - type: integer 
+	Parameter C_I_LMB bound to: 1 - type: integer 
+	Parameter C_I_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_I_AXI bound to: 0 - type: integer 
+	Parameter G_TEMPLATE_LIST bound to: 0 - type: integer 
+	Parameter C_USE_MSR_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_PCMP_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_BARREL bound to: 0 - type: integer 
+	Parameter C_USE_DIV bound to: 0 - type: integer 
+	Parameter C_USE_HW_MUL bound to: 0 - type: integer 
+	Parameter C_USE_FPU bound to: 0 - type: integer 
+	Parameter C_USE_REORDER_INSTR bound to: 0 - type: integer 
+	Parameter C_UNALIGNED_EXCEPTIONS bound to: 0 - type: integer 
+	Parameter C_ILL_OPCODE_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_DIV_ZERO_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_FPU_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_FSL_LINKS bound to: 0 - type: integer 
+	Parameter C_USE_EXTENDED_FSL_INSTR bound to: 0 - type: integer 
+	Parameter C_FSL_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_USE_STACK_PROTECTION bound to: 0 - type: integer 
+	Parameter C_IMPRECISE_EXCEPTIONS bound to: 0 - type: integer 
+	Parameter C_USE_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_EXT_BRK bound to: 0 - type: integer 
+	Parameter C_USE_EXT_NM_BRK bound to: 0 - type: integer 
+	Parameter C_USE_NON_SECURE bound to: 0 - type: integer 
+	Parameter C_USE_MMU bound to: 0 - type: integer 
+	Parameter C_MMU_DTLB_SIZE bound to: 4 - type: integer 
+	Parameter C_MMU_ITLB_SIZE bound to: 2 - type: integer 
+	Parameter C_MMU_TLB_ACCESS bound to: 3 - type: integer 
+	Parameter C_MMU_ZONES bound to: 16 - type: integer 
+	Parameter C_MMU_PRIVILEGED_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_BRANCH_TARGET_CACHE bound to: 0 - type: integer 
+	Parameter C_BRANCH_TARGET_CACHE_SIZE bound to: 0 - type: integer 
+	Parameter C_PC_WIDTH bound to: 17 - type: integer 
+	Parameter C_PVR bound to: 0 - type: integer 
+	Parameter C_PVR_USER1 bound to: 8'b00000000 
+	Parameter C_PVR_USER2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_DYNAMIC_BUS_SIZING bound to: 0 - type: integer 
+	Parameter C_RESET_MSR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_OPCODE_0x0_ILLEGAL bound to: 0 - type: integer 
+	Parameter C_DEBUG_ENABLED bound to: 0 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_PC_BRK bound to: 1 - type: integer 
+	Parameter C_NUMBER_OF_RD_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_WR_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_DEBUG_EVENT_COUNTERS bound to: 5 - type: integer 
+	Parameter C_DEBUG_LATENCY_COUNTERS bound to: 1 - type: integer 
+	Parameter C_DEBUG_COUNTER_WIDTH bound to: 32 - type: integer 
+	Parameter C_DEBUG_TRACE_SIZE bound to: 8192 - type: integer 
+	Parameter C_DEBUG_EXTERNAL_TRACE bound to: 0 - type: integer 
+	Parameter C_DEBUG_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_DEBUG_PROFILE_SIZE bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_IS_EDGE bound to: 0 - type: integer 
+	Parameter C_EDGE_IS_POSITIVE bound to: 1 - type: integer 
+	Parameter C_ASYNC_INTERRUPT bound to: 1 - type: integer 
+	Parameter C_ASYNC_WAKEUP bound to: 3 - type: integer 
+	Parameter C_M0_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S0_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M1_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S1_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M2_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S2_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M3_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S3_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M4_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S4_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M5_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S5_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M6_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S6_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M7_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S7_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M8_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S8_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M9_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S9_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M10_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S10_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M11_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S11_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M12_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S12_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M13_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S13_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M14_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S14_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M15_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S15_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ICACHE_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_ICACHE_HIGHADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
+	Parameter C_USE_ICACHE bound to: 0 - type: integer 
+	Parameter C_ALLOW_ICACHE_WR bound to: 1 - type: integer 
+	Parameter C_ADDR_TAG_BITS bound to: 0 - type: integer 
+	Parameter C_CACHE_BYTE_SIZE bound to: 8192 - type: integer 
+	Parameter C_ICACHE_LINE_LEN bound to: 4 - type: integer 
+	Parameter C_ICACHE_ALWAYS_USED bound to: 1 - type: integer 
+	Parameter C_ICACHE_STREAMS bound to: 0 - type: integer 
+	Parameter C_ICACHE_VICTIMS bound to: 0 - type: integer 
+	Parameter C_ICACHE_FORCE_TAG_LUTRAM bound to: 0 - type: integer 
+	Parameter C_ICACHE_DATA_WIDTH bound to: 0 - type: integer 
+	Parameter C_M_AXI_IC_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IC_USER_VALUE bound to: 31 - type: integer 
+	Parameter C_M_AXI_IC_AWUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_IC_ARUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_IC_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_DCACHE_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_DCACHE_HIGHADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
+	Parameter C_USE_DCACHE bound to: 0 - type: integer 
+	Parameter C_ALLOW_DCACHE_WR bound to: 1 - type: integer 
+	Parameter C_DCACHE_ADDR_TAG bound to: 0 - type: integer 
+	Parameter C_DCACHE_BYTE_SIZE bound to: 8192 - type: integer 
+	Parameter C_DCACHE_LINE_LEN bound to: 4 - type: integer 
+	Parameter C_DCACHE_ALWAYS_USED bound to: 1 - type: integer 
+	Parameter C_DCACHE_USE_WRITEBACK bound to: 0 - type: integer 
+	Parameter C_DCACHE_VICTIMS bound to: 0 - type: integer 
+	Parameter C_DCACHE_FORCE_TAG_LUTRAM bound to: 0 - type: integer 
+	Parameter C_DCACHE_DATA_WIDTH bound to: 0 - type: integer 
+	Parameter C_M_AXI_DC_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DC_EXCLUSIVE_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_DC_USER_VALUE bound to: 31 - type: integer 
+	Parameter C_M_AXI_DC_AWUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_DC_ARUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_DC_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_BUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'MicroBlaze' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/hdl/microblaze_v11_0_vh_rfs.vhd:164874' bound to instance 'U0' of component 'MicroBlaze' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/synth/bd_3914_microblaze_I_0.vhd:762]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_microblaze_I_0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/synth/bd_3914_microblaze_I_0.vhd:88]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'bd_3914_microblaze_I_0' is unconnected for instance 'microblaze_I' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:249]
+WARNING: [Synth 8-7023] instance 'microblaze_I' of module 'bd_3914_microblaze_I_0' has 24 connections declared, but only 23 given [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:249]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_rst_0_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/synth/bd_3914_rst_0_0.vhd:74]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b1 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/synth/bd_3914_rst_0_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132157' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132157]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132157]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_rst_0_0' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/synth/bd_3914_rst_0_0.vhd:74]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'bd_3914_rst_0_0' is unconnected for instance 'rst_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:273]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_3914_rst_0_0' is unconnected for instance 'rst_0' [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:273]
+WARNING: [Synth 8-7023] instance 'rst_0' of module 'bd_3914_rst_0_0' has 10 connections declared, but only 8 given [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:273]
+INFO: [Synth 8-6155] done synthesizing module 'bd_3914' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (0#1) [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/synth/cpu.v:53]
+INFO: [Synth 8-6157] synthesizing module 'cpu_bridge' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/cpu_bridge.sv:23]
+	Parameter BRG_BASE bound to: -1073741824 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cpu_bridge' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/cpu_bridge.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'qspi_mmio_sys' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_mmio_sys.sv:3]
+	Parameter QSPI_SLAVE_COUNT bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mmio_controller' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/mmio_controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mmio_controller' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/mmio_controller.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'chu_timer' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/HDL/chu_timer.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'chu_timer' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/HDL/chu_timer.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'chu_uart' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/chu_uart.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'xil_internal_svlib_uart' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart.sv:1]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+	Parameter FIFO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'baud_gen' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/baud_gen.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'baud_gen' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/baud_gen.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart_rx.sv:2]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart_rx.sv:47]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart_rx.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart_tx.sv:2]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart_tx.sv:52]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart_tx.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'fifo' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/fifo/fifo.sv:2]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fifo_ctrl' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/fifo/fifo_ctrl.sv:2]
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/fifo/fifo_ctrl.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_ctrl' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/fifo/fifo_ctrl.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/fifo/reg_file.sv:2]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/fifo/reg_file.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/fifo/fifo.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'xil_internal_svlib_uart' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/uart.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'chu_uart' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/imports/uart/chu_uart.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'top_qspi_core' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/top_qspi_core.sv:25]
+	Parameter QSPI_SLAVE_COUNT bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'qspi_csr_map' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:23]
+	Parameter QSPI_CSR_DEPTH bound to: 32 - type: integer 
+	Parameter QSPI_CSR_WIDTH bound to: 32 - type: integer 
+	Parameter QSPI_DIVIDER_WIDTH bound to: 16 - type: integer 
+	Parameter QSPI_MAX_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter QSPI_DATA_LEN_WIDTH bound to: 16 - type: integer 
+	Parameter QSPI_DUMMY_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter QSPI_MODE_WIDTH bound to: 8 - type: integer 
+	Parameter QSPI_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter QSPI_SLAVE_COUNT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qspi_csr_map' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'qspi_controller' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:10]
+	Parameter QSPI_MAX_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter QSPI_SLAVE_COUNT bound to: 1 - type: integer 
+	Parameter QSPI_DATA_LEN_WIDTH bound to: 16 - type: integer 
+	Parameter QSPI_DUMMY_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter QSPI_MODE_WIDTH bound to: 8 - type: integer 
+	Parameter QSPI_DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:355]
+INFO: [Synth 8-226] default block is never used [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:380]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:662]
+INFO: [Synth 8-6155] done synthesizing module 'qspi_controller' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'qspi_shift_reg' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_shift_reg.sv:10]
+	Parameter QSPI_DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qspi_shift_reg' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_shift_reg.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'qspi_sclk_gen' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_sclk_gen.sv:9]
+	Parameter QSPI_DIVIDER_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qspi_sclk_gen' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_sclk_gen.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'qspi_io_ctrl' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_io_ctrl.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'qspi_io_ctrl' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_io_ctrl.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'top_fwft_fifo' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/top_fwft_fifo.sv:5]
+	Parameter FIFO_DEPTH bound to: 256 - type: integer 
+	Parameter FIFO_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fwft_fifo_ctrl' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/fwft_fifo_ctrl.sv:5]
+	Parameter FIFO_DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/fwft_fifo_ctrl.sv:47]
+INFO: [Synth 8-6155] done synthesizing module 'fwft_fifo_ctrl' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/fwft_fifo_ctrl.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'fwft_fifo_reg_file' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/fwft_fifo_reg_file.sv:6]
+	Parameter FIFO_DEPTH bound to: 256 - type: integer 
+	Parameter FIFO_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fwft_fifo_reg_file' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/fwft_fifo_reg_file.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_fwft_fifo' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/top_fwft_fifo.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'qspi_startupe2_sclk' [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_startupe2_sclk.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'STARTUPE2' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132343]
+	Parameter PROG_USR bound to: FALSE - type: string 
+	Parameter SIM_CCLK_FREQ bound to: 0.000000 - type: double 
+INFO: [Synth 8-6155] done synthesizing module 'STARTUPE2' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132343]
+INFO: [Synth 8-6155] done synthesizing module 'qspi_startupe2_sclk' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_startupe2_sclk.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_qspi_core' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/top_qspi_core.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'qspi_mmio_sys' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_mmio_sys.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_qspi_sys_test' (0#1) [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/top_qspi_sys_test.sv:24]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[0] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[2] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[9] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[10] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[12] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[13] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[14] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[15] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[16] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[17] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[18] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[19] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[20] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[21] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[22] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[23] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[24] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[25] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[26] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[27] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[28] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[29] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[30] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-6014] Unused sequential element csr_2d_array_reg[31] was removed.  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv:108]
+WARNING: [Synth 8-7137] Register phase_order_reg_reg[0] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:226]
+WARNING: [Synth 8-7137] Register phase_order_reg_reg[1] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:226]
+WARNING: [Synth 8-7137] Register phase_order_reg_reg[2] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:226]
+WARNING: [Synth 8-7137] Register phase_order_reg_reg[3] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:226]
+WARNING: [Synth 8-7137] Register phase_order_reg_reg[4] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:226]
+WARNING: [Synth 8-7137] Register phase_order_reg_reg[5] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:226]
+WARNING: [Synth 8-7137] Register phase_order_reg_reg[6] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:226]
+WARNING: [Synth 8-7137] Register phase_order_reg_reg[7] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:226]
+WARNING: [Synth 8-7137] Register data_order_reg_reg[0] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:227]
+WARNING: [Synth 8-7137] Register data_order_reg_reg[1] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:227]
+WARNING: [Synth 8-7137] Register data_order_reg_reg[2] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:227]
+WARNING: [Synth 8-7137] Register data_order_reg_reg[3] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:227]
+WARNING: [Synth 8-7137] Register data_order_reg_reg[4] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:227]
+WARNING: [Synth 8-7137] Register data_order_reg_reg[5] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:227]
+WARNING: [Synth 8-7137] Register data_order_reg_reg[6] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:227]
+WARNING: [Synth 8-7137] Register data_order_reg_reg[7] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:227]
+WARNING: [Synth 8-7137] Register io_width_order_reg_reg[0] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:228]
+WARNING: [Synth 8-7137] Register io_width_order_reg_reg[1] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:228]
+WARNING: [Synth 8-7137] Register io_width_order_reg_reg[2] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:228]
+WARNING: [Synth 8-7137] Register io_width_order_reg_reg[3] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:228]
+WARNING: [Synth 8-7137] Register io_width_order_reg_reg[4] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:228]
+WARNING: [Synth 8-7137] Register io_width_order_reg_reg[5] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:228]
+WARNING: [Synth 8-7137] Register io_width_order_reg_reg[6] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:228]
+WARNING: [Synth 8-7137] Register io_width_order_reg_reg[7] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:228]
+WARNING: [Synth 8-7137] Register data_type_order_reg_reg[0] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:229]
+WARNING: [Synth 8-7137] Register data_type_order_reg_reg[1] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:229]
+WARNING: [Synth 8-7137] Register data_type_order_reg_reg[2] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:229]
+WARNING: [Synth 8-7137] Register data_type_order_reg_reg[3] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:229]
+WARNING: [Synth 8-7137] Register data_type_order_reg_reg[4] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:229]
+WARNING: [Synth 8-7137] Register data_type_order_reg_reg[5] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:229]
+WARNING: [Synth 8-7137] Register data_type_order_reg_reg[6] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:229]
+WARNING: [Synth 8-7137] Register data_type_order_reg_reg[7] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:229]
+WARNING: [Synth 8-7137] Register rate_type_order_reg_reg[0] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:230]
+WARNING: [Synth 8-7137] Register rate_type_order_reg_reg[1] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:230]
+WARNING: [Synth 8-7137] Register rate_type_order_reg_reg[2] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:230]
+WARNING: [Synth 8-7137] Register rate_type_order_reg_reg[3] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:230]
+WARNING: [Synth 8-7137] Register rate_type_order_reg_reg[4] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:230]
+WARNING: [Synth 8-7137] Register rate_type_order_reg_reg[5] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:230]
+WARNING: [Synth 8-7137] Register rate_type_order_reg_reg[6] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:230]
+WARNING: [Synth 8-7137] Register rate_type_order_reg_reg[7] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:230]
+WARNING: [Synth 8-7137] Register phase_action_order_reg_reg[0] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:231]
+WARNING: [Synth 8-7137] Register phase_action_order_reg_reg[1] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:231]
+WARNING: [Synth 8-7137] Register phase_action_order_reg_reg[2] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:231]
+WARNING: [Synth 8-7137] Register phase_action_order_reg_reg[3] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:231]
+WARNING: [Synth 8-7137] Register phase_action_order_reg_reg[4] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:231]
+WARNING: [Synth 8-7137] Register phase_action_order_reg_reg[5] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:231]
+WARNING: [Synth 8-7137] Register phase_action_order_reg_reg[6] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:231]
+WARNING: [Synth 8-7137] Register phase_action_order_reg_reg[7] in module qspi_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv:231]
+WARNING: [Synth 8-7137] Register sclk_reg_reg in module qspi_sclk_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/sources_1/new/qspi_sclk_gen.sv:50]
+WARNING: [Synth 8-7129] Port read in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[31] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[30] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[29] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[28] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[27] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[26] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[25] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[24] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[23] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[22] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[21] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[20] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[19] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[18] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[17] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[16] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[15] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[14] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[13] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[12] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[11] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[31] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[30] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[29] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[28] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[27] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[26] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[25] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[24] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[23] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[22] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[21] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[20] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[19] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[18] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[17] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[16] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[15] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[14] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[13] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[12] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[11] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[10] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[9] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[8] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[7] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[6] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[5] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[4] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[3] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[2] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[20] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[19] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[18] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[17] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[16] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[15] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[14] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[13] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[12] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_addr[11] in module mmio_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_addr_strobe in module cpu_bridge is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_byte_enable[3] in module cpu_bridge is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_byte_enable[2] in module cpu_bridge is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_byte_enable[1] in module cpu_bridge is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_byte_enable[0] in module cpu_bridge is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_address[1] in module cpu_bridge is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_address[0] in module cpu_bridge is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ILMB_data_strobe in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ILMB_data_sel in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[0] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[1] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[2] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[3] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[4] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[5] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[6] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[7] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[8] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[9] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[10] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[11] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[12] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[13] in module instr_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IEXT_data[14] in module instr_mux is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.348 . Memory (MB): peak = 1821.742 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 454 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/bd_3914_microblaze_I_0.xdc] for cell 'cpu_unit/inst/microblaze_I/U0'
+Finished Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/bd_3914_microblaze_I_0.xdc] for cell 'cpu_unit/inst/microblaze_I/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/bd_3914_microblaze_I_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_qspi_sys_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_qspi_sys_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/bd_3914_rst_0_0_board.xdc] for cell 'cpu_unit/inst/rst_0/U0'
+Finished Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/bd_3914_rst_0_0_board.xdc] for cell 'cpu_unit/inst/rst_0/U0'
+Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/bd_3914_rst_0_0.xdc] for cell 'cpu_unit/inst/rst_0/U0'
+Finished Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_1/bd_3914_rst_0_0.xdc] for cell 'cpu_unit/inst/rst_0/U0'
+Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_3/bd_3914_dlmb_0.xdc] for cell 'cpu_unit/inst/dlmb/U0'
+Finished Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_3/bd_3914_dlmb_0.xdc] for cell 'cpu_unit/inst/dlmb/U0'
+Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/bd_3914_iomodule_0_0_board.xdc] for cell 'cpu_unit/inst/iomodule_0/U0'
+Finished Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_7/bd_3914_iomodule_0_0_board.xdc] for cell 'cpu_unit/inst/iomodule_0/U0'
+Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/cpu_board.xdc] for cell 'cpu_unit/inst'
+Finished Parsing XDC File [c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/cpu_board.xdc] for cell 'cpu_unit/inst'
+Parsing XDC File [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc]
+Finished Parsing XDC File [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_qspi_sys_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_qspi_sys_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_qspi_sys_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_qspi_sys_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1821.742 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 339 instances were transformed.
+  FD => FDRE: 32 instances
+  FDE => FDRE: 32 instances
+  FDR => FDRE: 45 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 5 instances
+  FDS => FDSE: 5 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 81 instances
+  MULT_AND => LUT2: 3 instances
+  MUXCY_L => MUXCY: 71 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 64 instances
+  SRL16 => SRL16E: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.181 . Memory (MB): peak = 1821.742 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/microblaze_I/U0. (constraint file  C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.runs/synth_1/dont_touch.xdc, line 37).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/rst_0/U0. (constraint file  C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.runs/synth_1/dont_touch.xdc, line 42).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/dlmb/U0. (constraint file  C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.runs/synth_1/dont_touch.xdc, line 48).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/iomodule_0/U0. (constraint file  C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.runs/synth_1/dont_touch.xdc, line 53).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/microblaze_I. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/rst_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/ilmb. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/dlmb. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/dlmb_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/ilmb_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/lmb_bram_I. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/iomodule_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'qspi_shift_reg'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'qspi_sclk_gen'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 | 00000000000000000000000000000000
+                   start |                               01 | 00000000000000000000000000000001
+                    data |                               10 | 00000000000000000000000000000010
+                    stop |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 | 00000000000000000000000000000000
+                   start |                               01 | 00000000000000000000000000000001
+                    data |                               10 | 00000000000000000000000000000010
+                    stop |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              SHIFT_IDLE |                              001 |                               00
+               SHIFT_DDR |                              100 |                               01
+               SHIFT_SDR |                              010 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'one-hot' in module 'qspi_shift_reg'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 | 00000000000000000000000000000000
+              CPHA_DELAY |                               01 | 00000000000000000000000000000001
+                   EDGE1 |                               10 | 00000000000000000000000000000010
+                   EDGE2 |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'qspi_sclk_gen'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:09 ; elapsed = 00:01:15 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I2'
+INFO: [Synth 8-223] decloning instance 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I3'
+INFO: [Synth 8-223] decloning instance 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I4'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (POR_FF_I) is unused and will be removed from module lmb_v10.
+INFO: [Synth 8-3332] Sequential element (U0/POR_FF_I) is unused and will be removed from module bd_3914_ilmb_0.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.ALU_unmask_EA_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.ALU_long_Op_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.ALU_long_ALU_Op_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.Reg_Test_Long_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[31].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[30].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[29].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[28].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[27].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[26].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[25].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[24].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[23].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[22].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[21].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[20].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[19].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[18].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[17].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[16].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[15].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[14].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[13].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[12].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[11].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[10].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[9].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[8].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[7].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[6].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[5].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[4].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[3].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[2].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[1].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[0].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[29].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[28].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[27].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[26].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[25].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[24].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[23].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[22].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[21].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[20].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[19].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[18].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[17].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[16].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[15].PC_Bit_I/EX_Reset_DFF.PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module proc_sys_reset.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:01:36 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'cpu_unit/inst/microblaze_I/U0/Reset' to pin 'cpu_unit/inst/rst_0/U0/FDRE_inst/Q'
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 216 of C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc. [C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc:216]
+Clock  not yet defined at line 223 of file C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc
+Clock  not yet defined at line 227 of file C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc
+Clock  not yet defined at line 232 of file C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc
+Clock  not yet defined at line 236 of file C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc
+Clock  not yet defined at line 241 of file C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc
+Clock  not yet defined at line 245 of file C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-QSPI.xdc
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:01:46 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:49 ; elapsed = 00:01:57 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:52 ; elapsed = 00:01:59 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:59 ; elapsed = 00:02:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:59 ; elapsed = 00:02:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:59 ; elapsed = 00:02:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:59 ; elapsed = 00:02:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    53|
+|3     |LUT1      |    64|
+|4     |LUT2      |   105|
+|5     |LUT3      |   198|
+|6     |LUT4      |   376|
+|7     |LUT5      |   251|
+|8     |LUT6      |   648|
+|10    |MULT_AND  |     2|
+|11    |MUXCY_L   |    68|
+|12    |MUXF7     |    47|
+|13    |RAM32X1D  |    64|
+|14    |RAM64M    |    48|
+|15    |RAMB36E1  |    32|
+|16    |SRL16     |     1|
+|17    |SRL16E    |    49|
+|18    |STARTUPE2 |     1|
+|19    |XORCY     |    50|
+|20    |FDCE      |   458|
+|21    |FDE       |    32|
+|22    |FDPE      |     7|
+|23    |FDR       |     5|
+|24    |FDRE      |   458|
+|25    |FDS       |     3|
+|26    |FDSE      |    22|
+|27    |LDC       |     1|
+|28    |IBUF      |     3|
+|29    |IOBUF     |     4|
+|30    |OBUF      |     2|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:59 ; elapsed = 00:02:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 12828 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:02:00 . Memory (MB): peak = 1821.742 ; gain = 890.699
+Synthesis Optimization Complete : Time (s): cpu = 00:01:59 ; elapsed = 00:02:07 . Memory (MB): peak = 1821.742 ; gain = 890.699
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.185 . Memory (MB): peak = 1821.742 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 490 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1821.742 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 258 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 19 instances
+  FDE => FDRE: 32 instances
+  FDR => FDRE: 5 instances
+  FDS => FDSE: 3 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+  LDC => LDCE: 1 instance 
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 79 instances
+  MULT_AND => LUT2: 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 64 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 48 instances
+  SRL16 => SRL16E: 1 instance 
+
+Synth Design complete | Checksum: 1b5eb10b
+INFO: [Common 17-83] Releasing license: Synthesis
+301 Infos, 232 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 1821.742 ; gain = 1289.543
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.runs/synth_1/top_qspi_sys_test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_qspi_sys_test_utilization_synth.rpt -pb top_qspi_sys_test_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 01:45:57 2026...

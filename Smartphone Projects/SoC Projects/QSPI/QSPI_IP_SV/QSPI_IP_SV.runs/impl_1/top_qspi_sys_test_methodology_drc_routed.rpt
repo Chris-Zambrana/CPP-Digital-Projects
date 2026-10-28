@@ -1,0 +1,380 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Wed Oct 28 01:47:50 2026
+| Host         : Chris running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_qspi_sys_test_methodology_drc_routed.rpt -pb top_qspi_sys_test_methodology_drc_routed.pb -rpx top_qspi_sys_test_methodology_drc_routed.rpx
+| Design       : top_qspi_sys_test
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 68
++-----------+----------+--------------------------------+------------+
+| Rule      | Severity | Description                    | Violations |
++-----------+----------+--------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert   | 2          |
+| TIMING-16 | Warning  | Large setup violation          | 52         |
+| TIMING-18 | Warning  | Missing input or output delay  | 12         |
+| TIMING-20 | Warning  | Non-clocked latch              | 1          |
+| LATCH-1   | Advisory | Existing latches in the design | 1          |
++-----------+----------+--------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell mmio_unit/qspi_slot2/csr_map/sclk_reg_reg_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mmio_unit/qspi_slot2/clk_gen/sclk_reg_reg_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell mmio_unit/qspi_slot2/csr_map/sclk_reg_reg_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mmio_unit/qspi_slot2/clk_gen/sclk_reg_reg_C/CLR
+mmio_unit/qspi_slot2/clk_gen/sclk_reg_reg_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.097 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_phase_action_reg_reg[0]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.228 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_rate_type_reg_reg/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.453 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_io_width_reg_reg[0]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.453 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_io_width_reg_reg[1]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.453 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_io_width_reg_reg[2]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -11.553 ns between qspi_io[3] (clocked by qspi_sclk_ext) and mmio_unit/qspi_slot2/shift_reg/rx_reg_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -11.591 ns between mmio_unit/qspi_slot2/master_controller/state_reg_reg[1]/C (clocked by sys_clk_pin) and qspi_io[1] (clocked by qspi_sclk_ext). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -11.603 ns between qspi_io[2] (clocked by qspi_sclk_ext) and mmio_unit/qspi_slot2/shift_reg/rx_reg_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -11.717 ns between qspi_io[0] (clocked by qspi_sclk_ext) and mmio_unit/qspi_slot2/shift_reg/rx_reg_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -11.762 ns between qspi_io[1] (clocked by qspi_sclk_ext) and mmio_unit/qspi_slot2/shift_reg/rx_reg_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -11.898 ns between qspi_io[1] (clocked by qspi_sclk_ext) and mmio_unit/qspi_slot2/shift_reg/rx_reg_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -11.900 ns between qspi_io[1] (clocked by qspi_sclk_ext) and mmio_unit/qspi_slot2/shift_reg/rx_reg_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -11.915 ns between qspi_io[2] (clocked by qspi_sclk_ext) and mmio_unit/qspi_slot2/shift_reg/rx_reg_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -11.974 ns between qspi_io[3] (clocked by qspi_sclk_ext) and mmio_unit/qspi_slot2/shift_reg/rx_reg_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -11.994 ns between mmio_unit/qspi_slot2/master_controller/state_reg_reg[1]/C (clocked by sys_clk_pin) and qspi_io[0] (clocked by qspi_sclk_ext). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -12.040 ns between mmio_unit/qspi_slot2/master_controller/state_reg_reg[1]/C (clocked by sys_clk_pin) and qspi_io[3] (clocked by qspi_sclk_ext). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -12.057 ns between mmio_unit/qspi_slot2/master_controller/state_reg_reg[1]/C (clocked by sys_clk_pin) and qspi_io[2] (clocked by qspi_sclk_ext). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -13.268 ns between mmio_unit/qspi_slot2/master_controller/state_reg_reg[0]/C (clocked by sys_clk_pin) and qspi_cs[0] (clocked by qspi_sclk_ext). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.036 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[4]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -2.036 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[5]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -2.190 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -2.303 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -2.394 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[0]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -2.394 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[1]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -2.394 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[2]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -2.394 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[3]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -2.394 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[6]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -2.394 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[7]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -2.399 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -2.439 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/full_reg_reg/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -2.458 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -2.519 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -2.609 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/empty_reg_reg/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -2.834 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -2.851 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -2.912 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/wr_ptr_reg_reg[2]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -2.912 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/wr_ptr_reg_reg[3]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -2.912 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/wr_ptr_reg_reg[4]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -2.917 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/rd_ptr_reg_reg[6]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -2.917 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/rd_ptr_reg_reg[7]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -3.002 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/rd_ptr_reg_reg[0]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -3.002 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/rd_ptr_reg_reg[1]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -3.002 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/rd_ptr_reg_reg[2]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -3.002 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/rd_ptr_reg_reg[3]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -3.037 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/wr_ptr_reg_reg[0]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -3.037 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/wr_ptr_reg_reg[1]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -3.037 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/wr_ptr_reg_reg[5]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -3.037 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/wr_ptr_reg_reg[6]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -3.037 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/wr_ptr_reg_reg[7]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -3.170 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/master_controller/lookahead_data_reg_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -3.199 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/rd_ptr_reg_reg[4]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -3.199 ns between mmio_unit/qspi_slot2/master_controller/phase_order_reg_reg[1][0]/C (clocked by sys_clk_pin) and mmio_unit/qspi_slot2/tx_fifo/u_fwft_fifo_ctrl/rd_ptr_reg_reg[5]/CE (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on qspi_io[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on qspi_io[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on qspi_io[2] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on qspi_io[3] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on reset_n relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on rx relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on qspi_cs[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on qspi_io[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on qspi_io[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on qspi_io[2] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on qspi_io[3] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on tx relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch mmio_unit/qspi_slot2/clk_gen/sclk_reg_reg_LDC cannot be properly analyzed as its control pin mmio_unit/qspi_slot2/clk_gen/sclk_reg_reg_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 1 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+

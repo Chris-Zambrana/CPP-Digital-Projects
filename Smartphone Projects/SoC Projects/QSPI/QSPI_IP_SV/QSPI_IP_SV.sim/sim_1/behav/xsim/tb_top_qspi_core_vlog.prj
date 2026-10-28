@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../QSPI_IP_SV.srcs/sources_1/new" --include "../../../../QSPI_IP_SV.srcs/sources_1/imports/HDL" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/fwft_fifo_ctrl.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/fwft_fifo_reg_file.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/qspi_types_pkg.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/qspi_controller.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/qspi_csr_map.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/qspi_io_ctrl.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/qspi_sclk_gen.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/qspi_shift_reg.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/qspi_startupe2_sclk.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/top_fwft_fifo.sv" \
+"../../../../QSPI_IP_SV.srcs/sources_1/new/top_qspi_core.sv" \
+"../../../../QSPI_IP_SV.srcs/sim_1/new/tb_top_qspi_core.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,16 @@
+// Mem file initialization records.
+//
+// SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+// Vivado v2023.1 (64-bit)
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+// Created on Wednesday October 14, 2026 - 01:18:25 pm, from:
+//
+//     Map file     - c:\Users\chris\ECE_Projects\QSPI_IP\QSPI_IP_SV\QSPI_IP_SV.gen\sources_1\ip\cpu\bd_0\bd_3914.bmm
+//     Data file(s) - c:/Users/chris/ECE_Projects/QSPI_IP/QSPI_IP_SV/QSPI_IP_SV.gen/sources_1/ip/cpu/bd_0/ip/ip_0/data/mb_bootloop_le.elf
+//
+// Address space 'cpu_inst_microblaze_I.cpu_inst_lmb_bram_I_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@00000000
+    B8000000
